@@ -1,67 +1,49 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float sensivity = 5f;
-    private float rotX, mouseX, mouseY;
-    private float rotY = 90f;
-    [SerializeField] private Camera _camera;
-    private Rigidbody rb;
+    [SerializeField] private float moveSpeed = 5f; // Hareket hızı
+    [SerializeField] private float sensitivity = 5f; // Mouse hassasiyeti
+    private float rotationX = 0f; // Yukarı-aşağı dönüş için değişken
+    private Camera playerCamera; // Karakterin kamerası
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        _camera = Camera.main;
-        Cursor.lockState = CursorLockMode.Locked;
-        rb.isKinematic = true; // Rigidbody'nin hareketi manuel olarak kontrol edileceği için.
+        playerCamera = Camera.main; // Ana kamerayı al
+        Cursor.lockState = CursorLockMode.Locked; // Mouse'u oyun ekranına kilitle
     }
 
     private void Update()
     {
-        HandleMouse();
-        RotatePlayerLeftRight();
+        HandleMovement(); // Hareketi kontrol et
+        HandleMouseLook(); // Mouse ile bakış kontrolü
     }
 
-    private void FixedUpdate()
+    private void HandleMovement()
     {
-        MovePlayer();
+        // Klavyeden girişleri al
+        float horizontalInput = Input.GetAxis("Horizontal"); // A-D (sol-sağ)
+        float verticalInput = Input.GetAxis("Vertical");     // W-S (ileri-geri)
+
+        // Hareket yönünü hesapla
+        Vector3 moveDirection = transform.right * horizontalInput + transform.forward * verticalInput;
+
+        // Hareketi uygula
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
     }
 
-    private void MovePlayer()
+    private void HandleMouseLook()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        // Mouse hareketlerini al
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity; // Sağ-sol dönüş
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity; // Yukarı-aşağı dönüş
 
-        // Yerel koordinatlara göre hareket yönü
-        Vector3 dir = transform.right * horizontalInput + transform.forward * verticalInput;
+        // Sağa-sola dönüş (karakterin kendi ekseni)
+        transform.Rotate(Vector3.up * mouseX);
 
-        // Hareketi uygulama
-        rb.MovePosition(transform.position + dir * moveSpeed * Time.fixedDeltaTime);
-    }
-
-    private void HandleMouse()
-    {
-        mouseX = Input.GetAxis("Mouse X") * sensivity;
-        mouseY = Input.GetAxis("Mouse Y") * sensivity;
-    }
-
-    private void RotatePlayerLeftRight()
-    {
-        rotY += mouseX;
-
-        // Dönüşü uygula
-        transform.rotation = Quaternion.Euler(0, rotY, 0);
-    }
-
-    private void RotatePlayerUpDown()
-    {
-        rotX -= mouseY;
-        rotX = Mathf.Clamp(rotX, -70f, 70f);
-
-        _camera.transform.localRotation = Quaternion.Euler(rotX, 0, 0);
+        // Yukarı-aşağı bakış (kamerayı döndür)
+        rotationX -= mouseY;
+        rotationX = Mathf.Clamp(rotationX, -70f, 70f); // Yukarı ve aşağı bakış sınırları
+        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
     }
 }
