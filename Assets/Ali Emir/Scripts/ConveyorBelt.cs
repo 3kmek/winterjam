@@ -31,18 +31,18 @@ public class ConveyorBelt : MonoBehaviour
     // Objeler trigger içine girdiğinde
     private void OnTriggerStay(Collider other)
     {
-        // Eğer obje "Player" tagine sahip değilse
         if (other.CompareTag("Player"))
         {
-            return; // Player ise hiçbir şey yapma
+            return;
         }
 
-        // Objede Rigidbody varsa
         Rigidbody rb = other.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            // Objeyi conveyor yönünde hızla hareket ettir
-            rb.velocity = conveyorDirection * speed;
+            // Objeyi manuel olarak pozisyonla hareket ettir
+            Vector3 newPosition = other.transform.position + conveyorDirection * speed * Time.deltaTime;
+            rb.MovePosition(newPosition);
         }
     }
+
 }
