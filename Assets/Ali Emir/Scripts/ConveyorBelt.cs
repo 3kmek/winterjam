@@ -2,29 +2,47 @@
 
 public class ConveyorBelt : MonoBehaviour
 {
-    [SerializeField] private float speed; // Kaydırma hızı
-    [SerializeField] private Material material; // Conveyor belt'in malzemesi
-
-    private Vector2 offset; // Texture kaydırma için vektör
+    [SerializeField] private float speed; // Conveyor hız
+    [SerializeField] private Material material; // Conveyor material
+    private Vector2 offset; // Texture kaydırma
+    private Vector3 conveyorDirection; // Belt'in yönü
 
     void Start()
     {
-        // MeshRenderer'ın materialine eriş
+        // Conveyor yönü (lokal Z ekseni)
+        conveyorDirection = transform.right;
+
+        // Malzeme cache'le
         if (material == null)
         {
             material = GetComponent<MeshRenderer>().material;
         }
 
-        // Başlangıç kaydırma vektörünü sıfırla
         offset = Vector2.zero;
     }
 
     void Update()
     {
-        // Y ekseni boyunca kaydırma
+        // Doku kaydırma
         offset.y -= speed * Time.deltaTime;
-
-        // Malzeme üzerindeki texture kaydırmasını uygula
         material.mainTextureOffset = offset;
+    }
+
+    // Objeler trigger içine girdiğinde
+    private void OnTriggerStay(Collider other)
+    {
+        // Eğer obje "Player" tagine sahip değilse
+        if (other.CompareTag("Player"))
+        {
+            return; // Player ise hiçbir şey yapma
+        }
+
+        // Objede Rigidbody varsa
+        Rigidbody rb = other.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            // Objeyi conveyor yönünde hızla hareket ettir
+            rb.velocity = conveyorDirection * speed;
+        }
     }
 }
