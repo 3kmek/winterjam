@@ -40,7 +40,7 @@ public class ConveyorBelt : MonoBehaviour
         if (rb != null)
         {
             // Objeyi manuel olarak pozisyonla hareket ettir
-            Vector3 newPosition = other.transform.position + conveyorDirection * speed * Time.deltaTime;
+            Vector3 newPosition = other.transform.position + conveyorDirection * speed * Time.deltaTime * 2.5f;
             rb.MovePosition(newPosition);
         }
     }
