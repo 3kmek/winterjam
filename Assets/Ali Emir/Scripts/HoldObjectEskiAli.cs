@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -12,6 +11,8 @@ public class HoldObjectEskiAli : MonoBehaviour
     private GameObject lastHighlightedObject; // Daha önce highlight edilen obje
     [SerializeField] private TextMeshProUGUI interactText; // Etkileşim yazısını gösterecek TextMeshPro UI
 
+    private Dictionary<GameObject, Color> originalColors = new Dictionary<GameObject, Color>(); // Objelerin orijinal renkleri
+
     void Update()
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -22,8 +23,6 @@ public class HoldObjectEskiAli : MonoBehaviour
             // Interactable tag'ine sahip bir obje tespit edildiğinde
             if (hit.transform.gameObject.CompareTag("Interactable") && Vector3.Distance(hit.transform.position, this.transform.position) < holdRange)
             {
-                
-                // Highlight (renk değişimi) uygula
                 HighlightObject(hit.transform.gameObject);
 
                 // Etkileşim yazısını göster
@@ -34,14 +33,13 @@ public class HoldObjectEskiAli : MonoBehaviour
                 {
                     hit.transform.position = this.transform.GetChild(0).GetChild(0).transform.position;
                     isHolding = true;
-                    // Objenin Player'a dönmesini sağla
                     RotateObjectToPlayer(hit.transform);
 
                     Debug.Log(hit.transform.gameObject.name);
                     hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                     holdingObject = hit.transform.gameObject;
 
-                    // Etkileşim yazısını gizle (artık objeyi tutuyoruz)
+                    // Etkileşim yazısını gizle
                     ShowInteractText(false);
                 }
             }
@@ -73,11 +71,17 @@ public class HoldObjectEskiAli : MonoBehaviour
         // Zaten highlight edilmişse, tekrardan işlem yapma
         if (lastHighlightedObject == obj) return;
 
-        // Yeni objeyi highlight et
         RemoveHighlight(); // Önceki highlight'ı kaldır
+
         Renderer renderer = obj.GetComponent<Renderer>();
         if (renderer != null)
         {
+            // Objeyi daha önce highlight etmediysen orijinal rengini sakla
+            if (!originalColors.ContainsKey(obj))
+            {
+                originalColors[obj] = renderer.material.color;
+            }
+
             renderer.material.color = Color.green; // Highlight rengi
         }
         lastHighlightedObject = obj;
@@ -89,9 +93,9 @@ public class HoldObjectEskiAli : MonoBehaviour
         if (lastHighlightedObject != null)
         {
             Renderer renderer = lastHighlightedObject.GetComponent<Renderer>();
-            if (renderer != null)
+            if (renderer != null && originalColors.ContainsKey(lastHighlightedObject))
             {
-                renderer.material.color = Color.white; // Varsayılan renk
+                renderer.material.color = originalColors[lastHighlightedObject]; // Objeyi orijinal rengine döndür
             }
             lastHighlightedObject = null;
         }
@@ -99,7 +103,6 @@ public class HoldObjectEskiAli : MonoBehaviour
 
     void RotateObjectToPlayer(Transform objTransform)
     {
-        // Objenin Player'a dönük olmasını sağla
         Vector3 playerForward = this.transform.forward; // Player'ın baktığı yön
         playerForward *= -1;
         objTransform.rotation = Quaternion.LookRotation(playerForward); // Obje Player'ın yönüne bakar

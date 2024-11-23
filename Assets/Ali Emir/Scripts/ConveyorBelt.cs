@@ -2,11 +2,14 @@
 
 public class ConveyorBelt : MonoBehaviour
 {
-    [SerializeField] private float speed; // Conveyor hız
+    [SerializeField] public float RaySpeed = 0.8f; // Conveyor hız
     [SerializeField] private Material material; // Conveyor material
     private Vector2 offset; // Texture kaydırma
     private Vector3 conveyorDirection; // Belt'in yönü
 
+    private float timer = 0f; // Zamanlayıcı
+     
+    
     void Start()
     {
         // Conveyor yönü (lokal Z ekseni)
@@ -19,12 +22,26 @@ public class ConveyorBelt : MonoBehaviour
         }
 
         offset = Vector2.zero;
+        
+        
     }
 
     void Update()
     {
-        // Doku kaydırma
-        offset.y -= speed * Time.deltaTime;
+        if (timer < 3f) // 5 saniye dolana kadar kaydırma işlemi
+        {
+            Sliding();
+        }
+        else
+        {
+            RaySpeed = 0f; // 5 saniye sonra hızı sıfırla
+        }
+    }
+
+    void Sliding()
+    {
+        timer += Time.deltaTime;
+        offset.y -= RaySpeed * Time.deltaTime;
         material.mainTextureOffset = offset;
     }
 
@@ -40,7 +57,7 @@ public class ConveyorBelt : MonoBehaviour
         if (rb != null)
         {
             // Objeyi manuel olarak pozisyonla hareket ettir
-            Vector3 newPosition = other.transform.position + conveyorDirection * speed * Time.deltaTime * 2.5f;
+            Vector3 newPosition = other.transform.position + conveyorDirection * RaySpeed * Time.deltaTime * -2.5f;
             rb.MovePosition(newPosition);
         }
     }
