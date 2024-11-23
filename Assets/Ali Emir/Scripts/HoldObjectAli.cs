@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HoldObjectAli : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class HoldObjectAli : MonoBehaviour
     [SerializeField] float holdRange = 3f;
 
     private GameObject lastHighlightedObject; // Daha önce highlight edilen obje
+    [SerializeField] private TextMeshProUGUI interactText; // Etkileşim yazısını gösterecek TextMeshPro UI
 
     void Update()
     {
@@ -23,6 +25,9 @@ public class HoldObjectAli : MonoBehaviour
                 // Highlight (renk değişimi) uygula
                 HighlightObject(hit.transform.gameObject);
 
+                // Etkileşim yazısını göster
+                ShowInteractText(true);
+
                 // Sol tık ile obje tutma
                 if (Input.GetKey(KeyCode.Mouse0))
                 {
@@ -34,18 +39,23 @@ public class HoldObjectAli : MonoBehaviour
                     Debug.Log(hit.transform.gameObject.name);
                     hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                     holdingObject = hit.transform.gameObject;
+
+                    // Etkileşim yazısını gizle (artık objeyi tutuyoruz)
+                    ShowInteractText(false);
                 }
             }
             else
             {
-                // Highlight kaldır
+                // Highlight kaldır ve yazıyı gizle
                 RemoveHighlight();
+                ShowInteractText(false);
             }
         }
         else
         {
-            // Raycast hiçbir şey bulamazsa highlight kaldır
+            // Raycast hiçbir şey bulamazsa highlight kaldır ve yazıyı gizle
             RemoveHighlight();
+            ShowInteractText(false);
         }
 
         // Sol tık bırakıldığında
@@ -92,5 +102,13 @@ public class HoldObjectAli : MonoBehaviour
         Vector3 playerForward = this.transform.forward; // Player'ın baktığı yön
         playerForward *= -1;
         objTransform.rotation = Quaternion.LookRotation(playerForward); // Obje Player'ın yönüne bakar
+    }
+
+    void ShowInteractText(bool show)
+    {
+        if (interactText != null)
+        {
+            interactText.gameObject.SetActive(show); // TextMeshPro objesini aktif/pasif yap
+        }
     }
 }
