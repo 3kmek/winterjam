@@ -11,13 +11,22 @@ public class TutorialDialog : MonoBehaviour
 
     [Header("Dialog Settings")]
     public string[] dialogLines; // Array of tutorial dialog lines
-    public float typingSpeed = 0.05f; // Speed of the typewriter effect
+    public AudioClip[] voiceLines; // Array of voice clips corresponding to dialog lines
+    public float typingSpeed = 0.05f; // Speed of the typewriter effect (optional)
 
     private int currentLineIndex = 0;
     private Coroutine typingCoroutine;
+    private AudioSource audioSource;
 
     void Start()
     {
+        // Get or Add AudioSource component
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
         dialogBox.SetActive(true); // Show the dialog box at the start
         ShowDialogLine();
     }
@@ -32,6 +41,9 @@ public class TutorialDialog : MonoBehaviour
                 StopCoroutine(typingCoroutine);
                 dialogText.text = dialogLines[currentLineIndex];
                 typingCoroutine = null;
+
+                // Ensure voice line is playing
+                PlayVoiceLine(currentLineIndex);
             }
             else
             {
@@ -45,6 +57,9 @@ public class TutorialDialog : MonoBehaviour
         // Start the typewriter effect
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
         typingCoroutine = StartCoroutine(TypeText(dialogLines[currentLineIndex]));
+
+        // Play voice line for this dialog line
+        PlayVoiceLine(currentLineIndex);
     }
 
     IEnumerator TypeText(string line)
@@ -56,6 +71,15 @@ public class TutorialDialog : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed); // Wait before adding the next letter
         }
         typingCoroutine = null; // Typing complete
+    }
+
+    void PlayVoiceLine(int index)
+    {
+        if (voiceLines.Length > index && voiceLines[index] != null)
+        {
+            audioSource.clip = voiceLines[index];
+            audioSource.Play();
+        }
     }
 
     void ShowNextLine()
@@ -75,9 +99,9 @@ public class TutorialDialog : MonoBehaviour
     void EndDialog()
     {
         // Hide the dialog box and optionally start gameplay
+        audioSource.Stop();
         dialogBox.SetActive(false);
         TutUI.SetActive(false);
-
         Debug.Log("Tutorial completed! Gameplay starts.");
         // Enable player controls or start the main game logic here
     }
