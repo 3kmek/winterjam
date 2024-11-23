@@ -18,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc4d423e64047374faed68a0cb27dad1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc4d423e64047374faed68a0cb27dad1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.15
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc4d423e64047374faed68a0cb27dad1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,6 +66,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dc4d423e64047374faed68a0cb27dad1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8648837723718522349}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dc4d423e64047374faed68a0cb27dad1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7659461909896698812}
   m_SourcePrefab: {fileID: 100100000, guid: dc4d423e64047374faed68a0cb27dad1, type: 3}
 --- !u!1 &171208447251106455 stripped
 GameObject:
@@ -84,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b85df26c16f7be4f8b85d9d0ac17a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.8
+  speed: 0.5
   material: {fileID: 0}
 --- !u!65 &8648837723718522349
 BoxCollider:
@@ -107,3 +110,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06320542, y: 0.020000005, z: 0.010202882}
   m_Center: {x: 3.1788318e-20, y: 1.1134698e-17, z: 0.0021970603}
+--- !u!65 &7659461909896698812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171208447251106455}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.06320542, y: 0.020000007, z: 0.0058087683}
+  m_Center: {x: 0, y: -9.313226e-10, z: 0}

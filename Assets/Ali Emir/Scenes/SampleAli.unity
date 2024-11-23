@@ -122,32 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &491291730 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 171208447251106455, guid: 37f6b3f471e41bf459ec0513557faf06, type: 3}
-  m_PrefabInstance: {fileID: 761596072158627069}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &491291736
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491291730}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.06320542, y: 0.020000007, z: 0.0058087683}
-  m_Center: {x: 0, y: -9.313226e-10, z: 0}
 --- !u!1 &534536451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,14 +1248,6 @@ PrefabInstance:
       propertyPath: interactText
       value: 
       objectReference: {fileID: 1866185385}
-    - target: {fileID: 3459136960025554066, guid: 287754c8f0908924ca3720db1c20b2b1, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3c0efb762bd018247965f4ed371b228a, type: 2}
-    - target: {fileID: 4761502010860829038, guid: 287754c8f0908924ca3720db1c20b2b1, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5414943947690530643, guid: 287754c8f0908924ca3720db1c20b2b1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1387,17 +1353,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -179.828
       objectReference: {fileID: 0}
-    - target: {fileID: 5150850687401163389, guid: 37f6b3f471e41bf459ec0513557faf06, type: 3}
-      propertyPath: speed
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 171208447251106455, guid: 37f6b3f471e41bf459ec0513557faf06, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 491291736}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37f6b3f471e41bf459ec0513557faf06, type: 3}
 --- !u!1001 &5942317359776350073
 PrefabInstance:
@@ -1451,14 +1410,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vana
       objectReference: {fileID: 0}
-    - target: {fileID: 9191145904286020866, guid: 2b8a2d3163aef7745bd0a5c489f2d92b, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9191145904286020866, guid: 2b8a2d3163aef7745bd0a5c489f2d92b, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1478,7 +1429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8520492256032339918, guid: 968926f71bdb88340b98bca07e2edd4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.54
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8520492256032339918, guid: 968926f71bdb88340b98bca07e2edd4a, type: 3}
       propertyPath: m_LocalPosition.z
