@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class HoldObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    bool isHolding = false;
+    
     public GameObject holdingObject;
     [SerializeField] float holdRange = 3f;
     // Update is called once per frame
@@ -29,7 +28,6 @@ public class HoldObject : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            Debug.Log(holdingObject.name);
             holdingObject.GetComponent<Rigidbody>().isKinematic = false;
         }
 }
