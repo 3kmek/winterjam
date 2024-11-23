@@ -5,5 +5,4 @@ using UnityEngine;
 public class Product : MonoBehaviour
 {
     public GameObject[] Resources ;
-    public string Name;
 }
