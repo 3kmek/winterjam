@@ -38,20 +38,19 @@ public class DolapAnim : MonoBehaviour
             if (isLookingAtLever)
             {
                 interactText.gameObject.SetActive(true); // "Hold E" yazısını göster
-                leverAnimator.SetBool("DolapTrue") = true;
-                //leverAnimator.SetTrigger("DolapPull");
+                leverAnimator.SetTrigger("DolapPull");
                 
                 
             }
             else
             {
                 interactText.gameObject.SetActive(false); // Yazıyı gizle
-                //leverAnimator.SetTrigger("DolapNotPull");
+                leverAnimator.SetTrigger("DolapNotPull");
             }
         }
         else
         {
-            //leverAnimator.SetTrigger("DolapNotPull");
+            leverAnimator.SetTrigger("DolapNotPull");
             interactText.gameObject.SetActive(false); // Yazıyı gizle
         }
     }
