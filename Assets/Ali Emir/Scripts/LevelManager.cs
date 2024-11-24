@@ -37,4 +37,9 @@ public class LevelManager : MonoBehaviour
             // SceneManager.LoadScene("AnaMenu");
         }
     }
+
+    public void GoToLevel1()
+    {
+        SceneManager.LoadScene("Level1");
+    }
 }

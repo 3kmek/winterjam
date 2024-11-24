@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Oguz/BadEnding.unity
     guid: b4adf7cbdb621134e858db62286f2dfd
+  - enabled: 1
+    path: Assets/SON/GameOver.unity
+    guid: 3546059ca55180e46a627313ebb99970
   m_configObjects: {}

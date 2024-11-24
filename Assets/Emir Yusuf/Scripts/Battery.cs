@@ -14,6 +14,8 @@ public class Battery : MonoBehaviour
     [SerializeField] float vfxDuration = 2f;
     float targetTimeINC;
     float targetTimeDEC;
+    
+    [SerializeField] public LevelManager levelManager;
 
     // Update is called once per frame
     void Update()
@@ -27,6 +29,11 @@ public class Battery : MonoBehaviour
         if (targetTimeDEC < Time.time)
         {
             Decvfx.SetActive(false);
+        }
+
+        if (batteryMax <= 0f)
+        {
+            
         }
     }
 
@@ -56,4 +63,7 @@ public class Battery : MonoBehaviour
         Decvfx.SetActive(true);
         targetTimeDEC = Time.time + vfxDuration;
     }
+    
+    
+    
 }
