@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    private Manager Manager;
     // Bu fonksiyonu seviyenin tamamlandığı zaman çağırın
     public void NextLevel()
     {
@@ -12,7 +13,21 @@ public class LevelManager : MonoBehaviour
         // Sonraki sahnenin olup olmadığını kontrol et
         if (sonrakiSahneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(sonrakiSahneIndex);
+            if (SceneManager.GetActiveScene().name == "Level5")
+            {
+                if (Manager.İyiSkor >= Manager.KötüSkor)
+                {
+                    SceneManager.LoadScene("GoodEnding");
+                }
+                if (Manager.KötüSkor > Manager.İyiSkor)
+                {
+                    SceneManager.LoadScene("BadEnding");
+                }
+            }
+            else
+            {
+                SceneManager.LoadScene(sonrakiSahneIndex);
+            }
         }
         else
         {
