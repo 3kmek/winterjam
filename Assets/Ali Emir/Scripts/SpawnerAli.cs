@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SpawnerAli : MonoBehaviour
 {
+    [SerializeField] GameObject[] meats;
+    int spawnedMeat = 0;
+    int i = 1;
     [SerializeField] GameObject[] matters;
     [SerializeField] public GameObject belt;
     [SerializeField] private float RaySpeed;
@@ -35,7 +38,11 @@ public class SpawnerAli : MonoBehaviour
         RaySpeed = belt.GetComponent<ConveyorBelt>().RaySpeed;
         if (RaySpeed > 0)
         {
-            if (hedefZaman < Time.time)
+            if (spawnedMeat < meats.Length && i%9==0)
+            {
+                Instantiate(meats[spawnedMeat], transform.position, Quaternion.identity);
+            }
+            else if (hedefZaman < Time.time)
             {
                 Spawn();
                 hedefZaman = Time.time + Cooldown;
