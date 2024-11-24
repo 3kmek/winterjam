@@ -71,14 +71,8 @@ public class TaskManager : MonoBehaviour
         Debug.Log("level bitti digerine gec");
         if (SceneManager.GetActiveScene().name == "Level5")
         {
-            if (manager.İyiSkor >= manager.KötüSkor)
-            {
-                SceneManager.LoadScene("GoodEnding");
-            }
-            if (manager.KötüSkor > manager.İyiSkor)
-            {
-                SceneManager.LoadScene("BadEnding");
-            }
+            levelManager.BadEnding();
+            
         }
         else
         {

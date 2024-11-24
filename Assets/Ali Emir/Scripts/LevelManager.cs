@@ -47,4 +47,14 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene("GameOver");
     }
+    
+    public void GoodEnding()
+    {
+        SceneManager.LoadScene("GoodEnding");
+    }
+    
+    public void BadEnding()
+    {
+        SceneManager.LoadScene("BadEnding");
+    }
 }
