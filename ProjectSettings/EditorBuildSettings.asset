@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Oguz/Oguz.unity
     guid: 4056dd9ae465d3047ad140672c839a64
   - enabled: 1
     path: Assets/Oguz/GoodEnding.unity
     guid: c5746e60f9c68714bbe93f9365a03ee5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Oguz/BadEnding.unity
     guid: b4adf7cbdb621134e858db62286f2dfd
   m_configObjects: {}
