@@ -466,6 +466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Oda\u0130\xE7i"
       objectReference: {fileID: 0}
+    - target: {fileID: 4287103334655682926, guid: 19d5faa69ba45ee459810fc45a91cdd2, type: 3}
+      propertyPath: m_Intensity
+      value: 73.94
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
