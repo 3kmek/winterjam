@@ -59,5 +59,83 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e0e374fdb40924fb9c30d471a73476, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1416913208511822013}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e0e374fdb40924fb9c30d471a73476, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7620624607305277200}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e0e374fdb40924fb9c30d471a73476, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2922357968763182683}
   m_SourcePrefab: {fileID: 100100000, guid: d1e0e374fdb40924fb9c30d471a73476, type: 3}
+--- !u!1 &2544565355622260757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e0e374fdb40924fb9c30d471a73476, type: 3}
+  m_PrefabInstance: {fileID: 3427649865737067844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &-1416913208511822013
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544565355622260757}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7620624607305277200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544565355622260757}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01999065, y: 0.019842615, z: 0.02529346}
+  m_Center: {x: 0, y: -0.000074015916, z: 0.0026467328}
+--- !u!114 &-2922357968763182683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544565355622260757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631cbd107f046fe46929ebdab8edde2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resources:
+  - {fileID: 3780914658261191129, guid: 62b61fa02f2a30f4f80894777658887e, type: 3}
+  sprite: {fileID: 21300000, guid: 17c4db0bf3b583d49a5eacbfa74a40c1, type: 3}
+  NAME: tshirt
