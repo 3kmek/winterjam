@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bd6ad482fdc5b1b4d8108997673f4a33, type: 2}
     - target: {fileID: 919132149155446097, guid: a41f49294ad671f42ad646872d812c4f, type: 3}
       propertyPath: m_Name
-      value: "k\xF6m\xFCr (1)"
+      value: coal
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a41f49294ad671f42ad646872d812c4f, type: 3}
       propertyPath: m_TagString
