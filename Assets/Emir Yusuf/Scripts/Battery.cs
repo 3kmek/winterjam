@@ -9,12 +9,23 @@ public class Battery : MonoBehaviour
     [SerializeField] float chargeAmount = 2.0f;
     [SerializeField] Slider slider;
     [SerializeField] float decreaseAmount = 2.0f;
+    [SerializeField] GameObject vfx;
+    [SerializeField] float vfxDuration = 2f;
+    float targetTime;
+
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            IncreaseBattery();
+        }
         batteryMax -= decreaseRatio* Time.deltaTime;
         slider.value = batteryMax;
-        
+        if (targetTime < Time.time)
+        {
+            vfx.SetActive(false);
+        }
     }
 
     public bool isBatteryDead()
@@ -32,6 +43,8 @@ public class Battery : MonoBehaviour
     {
         batteryMax += chargeAmount;
         batteryMax = batteryMax > 100 ? 100 : batteryMax;
+        vfx.SetActive(true);
+        targetTime = Time.time + vfxDuration;
     }
     
     public void DecreaseBattery()
