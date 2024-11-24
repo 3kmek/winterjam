@@ -85,6 +85,7 @@ public class Converter : MonoBehaviour
                 }
                 Destroy(resource.gameObject);
             }
+            Debug.Log(productNum);
             resources.Clear();
             if(productSet.TryGetValue(productNum,out int index))
             {

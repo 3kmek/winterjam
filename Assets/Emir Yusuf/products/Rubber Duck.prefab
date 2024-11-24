@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resources:
-  - {fileID: 654792645095320461, guid: 1392017ff77c8084d8265fddaf775108, type: 3}
-  - {fileID: 6729608211200684366, guid: ba9b6c5403cce604a983359cd22f105e, type: 3}
+  - {fileID: 4828423481712122042, guid: cf4974b07f0190f46af1481111fcfaa6, type: 3}
+  - {fileID: 8764075341749489077, guid: ec625caa2317a764093e2589661808d8, type: 3}
   sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   NAME: rubberduck
 --- !u!54 &-6441208977717453718

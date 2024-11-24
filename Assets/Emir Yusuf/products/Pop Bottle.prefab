@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resources:
-  - {fileID: 3935414262206546182, guid: 06ab3193db6c9534b9e441c38f940e67, type: 3}
-  - {fileID: 1315111616280585026, guid: 4d214d6642f6e4041ae45ed8adc56225, type: 3}
+  - {fileID: 6480796858291463462, guid: f971a416b1817dc45a8949b1cead424d, type: 3}
+  - {fileID: 3946693209445058189, guid: 2f4926bd707f0a44096b3e6d555c0813, type: 3}
   sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   NAME: popbottle
 --- !u!54 &-6443728524404091788

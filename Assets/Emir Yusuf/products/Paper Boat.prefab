@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resources:
-  - {fileID: 5378330122088032055, guid: dd5791318da135148b792a626d2a4693, type: 3}
-  - {fileID: 4121043348649716519, guid: 467928d2e71b20a4c95040cf7428e098, type: 3}
+  - {fileID: 3780914658261191129, guid: 62b61fa02f2a30f4f80894777658887e, type: 3}
+  - {fileID: 3935676598962223578, guid: 9b38a85513875e543a11f45685fcaf1c, type: 3}
   sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   NAME: paperboat
 --- !u!54 &5122016592894634944

@@ -107,37 +107,48 @@ public class SpawnerAli : MonoBehaviour
 
     void Spawn(string obj)
     {
+        GameObject o;
         switch (obj)
         {
             case "paper":
-                Instantiate(matters[0],transform.position,Quaternion.identity);
+                o=Instantiate(matters[0],transform.position,Quaternion.identity);
+                o.name = obj;
                 break;
             case "plastic":
-                Instantiate(matters[1], transform.position, Quaternion.identity);
+                o = Instantiate(matters[1], transform.position, Quaternion.identity);
+                o.name = obj;
                 break;
             case "fabric":
-                Instantiate(matters[2], transform.position, Quaternion.identity);
+                o = Instantiate(matters[2], transform.position, Quaternion.identity);
+                o.name = obj;
                 break;
             case "leather":
-                Instantiate(matters[3], transform.position, Quaternion.identity);
+                o = Instantiate(matters[3], transform.position, Quaternion.identity);
+                o.name = obj;
                 break;
             case "paint":
-                Instantiate(matters[4], transform.position, Quaternion.identity);
+                o = Instantiate(matters[4], transform.position, Quaternion.identity);
+                o.name = obj;
                 break;
             case "metal":
-                Instantiate(matters[5], transform.position, Quaternion.identity);
+                o = Instantiate(matters[5], transform.position, Quaternion.identity);
+                o.name = obj;
                 break;
             case "wood":
-                Instantiate(matters[6], transform.position, Quaternion.identity);
+                o = Instantiate(matters[6], transform.position, Quaternion.identity);
+                o.name = obj;
                 break;
             case "cable":
-                Instantiate(matters[7], transform.position, Quaternion.identity);
+                o = Instantiate(matters[7], transform.position, Quaternion.identity);
+                o.name = obj;
                 break;
             case "coal":
-                Instantiate(matters[8], transform.position, Quaternion.identity);
+                o = Instantiate(matters[8], transform.position, Quaternion.identity);
+                o.name = obj;
                 break;
             case "glass":
-                Instantiate(matters[9], transform.position, Quaternion.identity);
+                o = Instantiate(matters[9], transform.position, Quaternion.identity);
+                o.name = obj;
                 break;
              default:
                 Debug.Log("oh noooo");

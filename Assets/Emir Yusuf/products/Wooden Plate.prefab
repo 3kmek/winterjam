@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resources:
-  - {fileID: 485940718864684618, guid: e889ddec4033f154cb9244cb819df98f, type: 3}
+  - {fileID: 3738839036925881122, guid: 6bcc417f31231614db1b53a552695e9e, type: 3}
   sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   NAME: woodenplate
 --- !u!54 &8587729763088478179

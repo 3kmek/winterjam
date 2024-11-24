@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resources:
-  - {fileID: 4121043348649716519, guid: 467928d2e71b20a4c95040cf7428e098, type: 3}
-  - {fileID: 8765873686117128690, guid: dc433c635cd119b4abab67a455f6640c, type: 3}
+  - {fileID: 3935676598962223578, guid: 9b38a85513875e543a11f45685fcaf1c, type: 3}
+  - {fileID: 2575943814627666132, guid: eecb63c029a96da4b99607cecbddbbea, type: 3}
   sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   NAME: newspaper
 --- !u!54 &-3875720514582697560

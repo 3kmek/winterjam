@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resources:
-  - {fileID: 5378330122088032055, guid: dd5791318da135148b792a626d2a4693, type: 3}
-  - {fileID: 4678233450435834371, guid: ab165fc61885d934cbbdaa6952151a1d, type: 3}
+  - {fileID: 3780914658261191129, guid: 62b61fa02f2a30f4f80894777658887e, type: 3}
+  - {fileID: 7604759839722103646, guid: 5af433e0e8e2be34a85568d2f37e26c3, type: 3}
   sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   NAME: grunabag
 --- !u!54 &4950304429846181791
