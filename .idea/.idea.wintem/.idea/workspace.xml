@@ -16,6 +16,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Ali Emir/Objeler/Converter/AnimConverter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ali Emir/Scripts/HoldObjectEskiAli.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Ali Emir/Scripts/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ali Emir/Scripts/ObjectLimit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ali Emir/Scripts/SpawnerAli.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ali Emir/Scripts/YeniHold.cs" root0="FORCE_HIGHLIGHTING" />
@@ -93,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732424161141</updated>
-      <workItem from="1732424165870" duration="20550000" />
+      <workItem from="1732424165870" duration="21717000" />
     </task>
     <servers />
   </component>

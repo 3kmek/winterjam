@@ -5,21 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Oguz/MainMenu.unity
     guid: 7ac58c356234584448d2403c68cf26b6
   - enabled: 1
     path: Assets/SON/Level1.unity
-    guid: 7a8d36f70355116488f6484ebe09e263
+    guid: 52aa1df5e0b1c8744996be3fc1990880
   - enabled: 1
     path: Assets/SON/Level2.unity
-    guid: 62adfb1beb5dc634e9bcfe15b4d161bd
+    guid: bdb11dcb3c74bd34c985c95b0baf769c
   - enabled: 1
     path: Assets/SON/Level3.unity
-    guid: d0fbbe9d88b4e3e44a5d2734d96cc9fc
+    guid: 7ea16492f2300ca4aaeab45467c9ded8
   - enabled: 1
-    path: Assets/SON/Level1.unity
-    guid: 52aa1df5e0b1c8744996be3fc1990880
+    path: Assets/SON/Level4.unity
+    guid: 5ad10227c43c6644ebdb1f9b083ec315
+  - enabled: 1
+    path: Assets/SON/Level5.unity
+    guid: 310754c003c7ba646b3711648c2af8de
   - enabled: 1
     path: Assets/Oguz/GoodEnding.unity
     guid: c5746e60f9c68714bbe93f9365a03ee5
