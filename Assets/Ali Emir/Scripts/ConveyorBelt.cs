@@ -28,7 +28,7 @@ public class ConveyorBelt : MonoBehaviour
 
     void Update()
     {
-        if (timer < 3f) // 5 saniye dolana kadar kaydırma işlemi
+        if (timer < 3.5f) // 5 saniye dolana kadar kaydırma işlemi
         {
             Sliding();
         }
