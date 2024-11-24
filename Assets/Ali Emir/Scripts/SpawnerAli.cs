@@ -107,7 +107,12 @@ public class SpawnerAli : MonoBehaviour
             Spawn("cable");
             return;
         }
-        random -= CableRate;
+        if (random < CoalRate)
+        {
+            Spawn("coal");
+            return;
+        }
+        random -= CoalRate;
         if (random < GlassRate) 
         {
             Spawn("glass");
