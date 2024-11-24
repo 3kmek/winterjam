@@ -42,4 +42,9 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+    
+    public void Gameover()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
 }

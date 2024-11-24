@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SON/MainMenu.unity
-    guid: 33f010acaa7ec5245afacc58450666ab
+    path: "Assets/Oguz/MainMenuAs\u0131l.unity"
+    guid: 7fa3f27b2386c4c4a9a53150f9f87f18
   - enabled: 1
     path: Assets/SON/Level1.unity
     guid: 52aa1df5e0b1c8744996be3fc1990880
@@ -23,21 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SON/Level5.unity
     guid: 310754c003c7ba646b3711648c2af8de
-  - enabled: 1
-    path: "Assets/SON/K\xD6T\xDC LEVEL.unity"
-    guid: 3a98dfc1a66d5274d8fb845ed5dd5c37
-  - enabled: 1
-    path: Assets/SON/Level2.unity
-    guid: e3639d76561f1af4683120759891dcce
-  - enabled: 1
-    path: Assets/SON/Level3.unity
-    guid: 4a17483932e6c2444923056accc626fc
-  - enabled: 1
-    path: Assets/SON/Level4.unity
-    guid: 8ce47e34f01a9dc4da4cd684c9c4b676
-  - enabled: 1
-    path: Assets/SON/Level5.unity
-    guid: b269fcec48250a04e8b3d575ad52a9c0
   - enabled: 1
     path: Assets/Oguz/GoodEnding.unity
     guid: c5746e60f9c68714bbe93f9365a03ee5

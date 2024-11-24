@@ -33,6 +33,7 @@ public class Battery : MonoBehaviour
 
         if (batteryMax <= 0f)
         {
+            levelManager.Gameover();
             
         }
     }
