@@ -15,6 +15,7 @@ public class TaskManager : MonoBehaviour
     
     [SerializeField] LevelManager levelManager;
     [SerializeField] Manager manager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,8 @@ public class TaskManager : MonoBehaviour
         currentTasks.Add(TasksObjects[2]);
         proIndex = 3;
         levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+        
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager>();
     }
 
     private void Update()
