@@ -20,7 +20,6 @@ public class HoldObject : MonoBehaviour
                 if (hit.transform.gameObject.CompareTag("Interactable")&&(Vector3.Distance(hit.transform.position,this.transform.position)<holdRange))
                 {
                     hit.transform.position = this.transform.GetChild(0).GetChild(0).transform.position;
-                    Debug.Log(hit.transform.gameObject.name);
                     hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic= true;
                     holdingObject = hit.transform.gameObject;
                 }
