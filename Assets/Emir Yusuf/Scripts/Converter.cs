@@ -73,25 +73,29 @@ public class Converter : MonoBehaviour
     
     void CreateProduct()
     {
-        foreach (GameObject resource in resources) 
+        if (resources.Count != 0)
         {
-            Debug.Log(resource.name);
-            if(set.TryGetValue(resource.name, out int value))
+            foreach (GameObject resource in resources) 
             {
-                productNum += value;
+                Debug.Log(resource.name);
+                if(set.TryGetValue(resource.name, out int value))
+                {
+                    productNum += value;
+                }
+                resources.Remove(resource);
+                Destroy(resource.gameObject);
             }
-            resources.Remove(resource);
-            Destroy(resource.gameObject);
-        }
 
-        if(productSet.TryGetValue(productNum,out int index))
-        {
-            Instantiate(products[index], ProductSpawner.transform.position, Quaternion.identity);
+            if(productSet.TryGetValue(productNum,out int index))
+            {
+                Instantiate(products[index], ProductSpawner.transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(Garbage, ProductSpawner.transform.position, Quaternion.identity);
+            }
         }
-        else
-        {
-            Instantiate(Garbage, ProductSpawner.transform.position, Quaternion.identity);
-        }
+        
 
         
     }
