@@ -56,7 +56,7 @@ public class Tezgah : MonoBehaviour
         //Debug.Log("Indexteyiz");
         for (int i = 0; i < lst.Count; i++)
         {
-            if (lst[i].NAME == itm.NAME)
+            if (lst[i]&& lst[i].NAME == itm.NAME)
             {
                 Debug.Log(i);
                 return i;
