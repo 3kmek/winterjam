@@ -121,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resources:
   - {fileID: 5378330122088032055, guid: dd5791318da135148b792a626d2a4693, type: 3}
+  sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  NAME: tshirt
 --- !u!54 &1937610411673417702
 Rigidbody:
   m_ObjectHideFlags: 0

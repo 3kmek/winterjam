@@ -121,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resources:
   - {fileID: 4121043348649716519, guid: 467928d2e71b20a4c95040cf7428e098, type: 3}
+  sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  NAME: papercup
 --- !u!54 &-1947631616532684888
 Rigidbody:
   m_ObjectHideFlags: 0

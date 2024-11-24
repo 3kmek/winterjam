@@ -122,6 +122,8 @@ MonoBehaviour:
   Resources:
   - {fileID: 654792645095320461, guid: 1392017ff77c8084d8265fddaf775108, type: 3}
   - {fileID: 6729608211200684366, guid: ba9b6c5403cce604a983359cd22f105e, type: 3}
+  sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  NAME: rubberduck
 --- !u!54 &-6441208977717453718
 Rigidbody:
   m_ObjectHideFlags: 0

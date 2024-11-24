@@ -123,6 +123,8 @@ MonoBehaviour:
   - {fileID: 485940718864684618, guid: e889ddec4033f154cb9244cb819df98f, type: 3}
   - {fileID: 4678233450435834371, guid: ab165fc61885d934cbbdaa6952151a1d, type: 3}
   - {fileID: 1315111616280585026, guid: 4d214d6642f6e4041ae45ed8adc56225, type: 3}
+  sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  NAME: painting
 --- !u!54 &5387366080870668320
 Rigidbody:
   m_ObjectHideFlags: 0
