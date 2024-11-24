@@ -629,14 +629,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Rayl\u0131 Player"
       objectReference: {fileID: 0}
-    - target: {fileID: 2584144779106330844, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
-      propertyPath: battery
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2584144779106330844, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
-      propertyPath: TasksObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3027053024597950791, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -687,19 +679,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383734408809638911, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: m_Size.x
-      value: 1.4610846
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383734408809638911, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
-      propertyPath: m_Size.z
-      value: 3.7856653
+      value: 1.0545892
       objectReference: {fileID: 0}
     - target: {fileID: 4383734408809638911, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: m_Center.x
-      value: -0.23054242
+      value: -0.027294528
       objectReference: {fileID: 0}
     - target: {fileID: 4383734408809638911, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: m_Center.z
-      value: -9.629716
+      value: -9.629722
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
