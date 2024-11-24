@@ -31,14 +31,14 @@ public class Dolap : MonoBehaviour
             if (RightEl.activeSelf)
             {
                 other.gameObject.SetActive(false);
-                RightEl.SetActive(true);
+                LeftEl.SetActive(true);
                 DolabaAtilan += 1;
             }
 
             else
             {
                 other.gameObject.SetActive(false);
-                LeftEl.SetActive(true);
+                RightEl.SetActive(true);
                 DolabaAtilan += 1;
             }
             
