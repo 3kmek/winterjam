@@ -32,6 +32,10 @@ public class TaskManager : MonoBehaviour
             {
                 notNull = true;
             }
+            else
+            {
+                images[i].SetActive(false);
+            }
         }
         if (!notNull) 
             LevelComplete();
