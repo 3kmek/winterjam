@@ -23,7 +23,11 @@ public class Tezgah : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Interactable"))
         {
-            if(!other.GetComponent<REl>() || !other.GetComponent<RightLeg>() || !other.GetComponent<Head>() || !other.GetComponent<Body>())
+            if(other.GetComponent<REl>() || other.GetComponent<RightLeg>() || other.GetComponent<Head>() || other.GetComponent<Body>())
+            {
+                return;
+            }
+            else
             {
                 animator.SetTrigger("Transfer");
                 Sell(other.gameObject);
