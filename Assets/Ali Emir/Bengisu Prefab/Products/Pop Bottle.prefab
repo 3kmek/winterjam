@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8db955b5231e26e48a2803643738ce41, type: 2}
     - target: {fileID: 919132149155446097, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
       propertyPath: m_Name
-      value: "soda \u015Fi\u015Fesi"
+      value: Pop Bottle
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
       propertyPath: m_TagString
@@ -86,6 +86,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1485262213825449176}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6728930399301343822}
   m_SourcePrefab: {fileID: 100100000, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
 --- !u!1 &3122330928091849145 stripped
 GameObject:
@@ -140,3 +143,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6728930399301343822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3122330928091849145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631cbd107f046fe46929ebdab8edde2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resources:
+  - {fileID: 6480796858291463462, guid: f971a416b1817dc45a8949b1cead424d, type: 3}
+  - {fileID: 3946693209445058189, guid: 2f4926bd707f0a44096b3e6d555c0813, type: 3}
+  sprite: {fileID: 21300000, guid: 84fa02df07f7ffa4e912f4144badbe3a, type: 3}
+  NAME: popbottle

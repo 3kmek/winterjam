@@ -94,8 +94,9 @@ GameObject:
   - component: {fileID: 4549847083754192084}
   - component: {fileID: 3963373472922040391}
   - component: {fileID: 2237957901418903413}
+  - component: {fileID: -8343086521870133406}
   m_Layer: 0
-  m_Name: CamBardak
+  m_Name: Glass Cup
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,6 +166,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8343086521870133406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8761564454975205860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631cbd107f046fe46929ebdab8edde2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resources:
+  - {fileID: 3946693209445058189, guid: 2f4926bd707f0a44096b3e6d555c0813, type: 3}
+  sprite: {fileID: 21300000, guid: a90e9948e5f30ac4ea8665c53f6a9e18, type: 3}
+  NAME: glasscup
 --- !u!1001 &6081185753304824288
 PrefabInstance:
   m_ObjectHideFlags: 0

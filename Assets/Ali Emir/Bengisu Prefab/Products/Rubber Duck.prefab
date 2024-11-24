@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f2fdc3c84f896704782bd7f18e661351, type: 3}
       propertyPath: m_Name
-      value: "\xF6rd\xFCk"
+      value: Rubber Duck
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f2fdc3c84f896704782bd7f18e661351, type: 3}
       propertyPath: m_TagString
@@ -78,6 +78,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f2fdc3c84f896704782bd7f18e661351, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3943580125055841188}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f2fdc3c84f896704782bd7f18e661351, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4463112647483184966}
   m_SourcePrefab: {fileID: 100100000, guid: f2fdc3c84f896704782bd7f18e661351, type: 3}
 --- !u!1 &6454642111878817842 stripped
 GameObject:
@@ -132,3 +135,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4463112647483184966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6454642111878817842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631cbd107f046fe46929ebdab8edde2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resources:
+  - {fileID: 4828423481712122042, guid: cf4974b07f0190f46af1481111fcfaa6, type: 3}
+  - {fileID: 8764075341749489077, guid: ec625caa2317a764093e2589661808d8, type: 3}
+  sprite: {fileID: 21300000, guid: cd1ce722af3654745b7b18576a42b05c, type: 3}
+  NAME: rubberduck

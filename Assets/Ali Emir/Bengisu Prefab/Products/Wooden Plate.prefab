@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5504710378424875174}
   - component: {fileID: 7964593283406900345}
   - component: {fileID: 8369048068789566538}
+  - component: {fileID: -3657079380444287167}
   m_Layer: 0
-  m_Name: Tahta
+  m_Name: Wooden Plate
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,6 +83,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.52915335, y: 0.12893283, z: 2.0544508}
   m_Center: {x: -0.006200075, y: -0.00022989511, z: 0.0048276186}
+--- !u!114 &-3657079380444287167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6108703698553059485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631cbd107f046fe46929ebdab8edde2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resources:
+  - {fileID: 3738839036925881122, guid: 6bcc417f31231614db1b53a552695e9e, type: 3}
+  sprite: {fileID: 21300000, guid: 7bd94de07b3fe3b4cb491730ffe8ffae, type: 3}
+  NAME: woodenplate
 --- !u!1001 &6151125269480737486
 PrefabInstance:
   m_ObjectHideFlags: 0
