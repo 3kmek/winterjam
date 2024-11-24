@@ -87,5 +87,84 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a2a855e83fbd54648baffea0ecf6be6f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4175006631630112965}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a2a855e83fbd54648baffea0ecf6be6f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 355291372266691126}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a2a855e83fbd54648baffea0ecf6be6f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7847841995709324433}
   m_SourcePrefab: {fileID: 100100000, guid: a2a855e83fbd54648baffea0ecf6be6f, type: 3}
+--- !u!1 &1464927169612679218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a2a855e83fbd54648baffea0ecf6be6f, type: 3}
+  m_PrefabInstance: {fileID: 1771355761827919203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &-4175006631630112965
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464927169612679218}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &355291372266691126
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464927169612679218}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7847841995709324433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464927169612679218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631cbd107f046fe46929ebdab8edde2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resources:
+  - {fileID: 3780914658261191129, guid: 62b61fa02f2a30f4f80894777658887e, type: 3}
+  - {fileID: 7604759839722103646, guid: 5af433e0e8e2be34a85568d2f37e26c3, type: 3}
+  sprite: {fileID: 21300000, guid: ed5d066dfcfc0654ea798c8913f535e8, type: 3}
+  NAME: grunabag
