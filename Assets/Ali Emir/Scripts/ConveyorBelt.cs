@@ -2,7 +2,7 @@
 
 public class ConveyorBelt : MonoBehaviour
 {
-    [SerializeField] public float RaySpeed = 0.8f; // Conveyor hız
+    [SerializeField] public float RaySpeed = 0.28f; // Conveyor hız
     [SerializeField] private Material material; // Conveyor material
     private Vector2 offset; // Texture kaydırma
     private Vector3 conveyorDirection; // Belt'in yönü
@@ -50,7 +50,7 @@ public class ConveyorBelt : MonoBehaviour
     public void Pulled()
     {
         timer = 0f;
-        RaySpeed = 0.8f;
+        RaySpeed = 0.28f;
     }
 
     // Objeler trigger içine girdiğinde
@@ -65,7 +65,7 @@ public class ConveyorBelt : MonoBehaviour
         if (rb != null)
         {
             // Objeyi manuel olarak pozisyonla hareket ettir
-            Vector3 newPosition = other.transform.position + conveyorDirection * RaySpeed * Time.deltaTime * -2.5f;
+            Vector3 newPosition = other.transform.position + conveyorDirection * RaySpeed * Time.deltaTime * -10f;
             rb.MovePosition(newPosition);
         }
     }

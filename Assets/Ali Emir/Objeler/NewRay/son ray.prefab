@@ -97,6 +97,10 @@ PrefabInstance:
       value: kayan
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: 5bcb8b5209721e442b2e6ca39c5b5f34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 5bcb8b5209721e442b2e6ca39c5b5f34, type: 3}
       propertyPath: m_TagString
       value: Belt
       objectReference: {fileID: 0}
