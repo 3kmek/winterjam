@@ -8,6 +8,8 @@ public class ConveyorBelt : MonoBehaviour
     private Vector3 conveyorDirection; // Belt'in yönü
 
     private float timer = 0f; // Zamanlayıcı
+
+    [SerializeField] private GameObject spawnPoint;
      
     
     void Start()
@@ -43,6 +45,12 @@ public class ConveyorBelt : MonoBehaviour
         timer += Time.deltaTime;
         offset.y -= RaySpeed * Time.deltaTime;
         material.mainTextureOffset = offset;
+    }
+
+    public void Pulled()
+    {
+        timer = 0f;
+        RaySpeed = 0.8f;
     }
 
     // Objeler trigger içine girdiğinde
