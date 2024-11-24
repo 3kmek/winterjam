@@ -34,7 +34,7 @@ public class TaskManager : MonoBehaviour
             }
             else
             {
-                images[i].SetActive(false);
+                images[i].gameObject.SetActive(false);
             }
         }
         if (!notNull) 
