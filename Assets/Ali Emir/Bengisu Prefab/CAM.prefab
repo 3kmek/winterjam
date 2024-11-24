@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6626944112898660434}
   - component: {fileID: 4148512813821500647}
   m_Layer: 0
-  m_Name: Cam
+  m_Name: cam
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
