@@ -40,6 +40,7 @@ public class DeliveryPoint : MonoBehaviour
     {
         foreach (GameObject go in deliveries)
         {
+            Debug.Log(go.name);
             if (go)
             {
                 int i = Index(taskManager.currentTasks, go.GetComponent<Product>());
@@ -48,23 +49,30 @@ public class DeliveryPoint : MonoBehaviour
                     taskManager.Sold(i);
                     Destroy(go);
                 }
+                else
+                {
+
+                    Destroy(go);
+                }
             }
             
+            
         }
+        deliveries.Clear();
     }
 
 
-   int Index(List<Product> lst,Product itm)
+    int Index(List<Product> lst, Product itm)
     {
-        Debug.Log("Indexteyiz");
-        for(int i=0; i < lst.Count; i++)
-        {   Debug.Log(lst[i].NAME);
-            Debug.Log(itm.NAME);
+        //Debug.Log("Indexteyiz");
+        for (int i = 0; i < lst.Count; i++)
+        {
             if (lst[i].NAME == itm.NAME)
+            {
                 Debug.Log(i);
                 return i;
+            }
         }
-
         return -1;
     }
 

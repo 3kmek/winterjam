@@ -8,9 +8,9 @@ public class TaskManager : MonoBehaviour
     [SerializeField] Product[] TasksObjects;
     [SerializeField] Image[] images;
     [SerializeField] Battery battery;
-    [HideInInspector] public List<Product> currentTasks = new List<Product>();
+    public List<Product> currentTasks = new List<Product>();
     int proIndex;
-
+    bool notNull=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,21 +23,33 @@ public class TaskManager : MonoBehaviour
         proIndex = 3;
     }
 
-
+    private void Update()
+    {
+        notNull = false;
+        for (int i = 0;i < currentTasks.Count; i++)
+        {
+            if (currentTasks[i] != null)
+            {
+                notNull = true;
+            }
+        }
+        if (!notNull) 
+            LevelComplete();
+    }
     public void Sold(int index)
     {
-        Debug.Log("sOLDOUT");
         battery.IncreaseBattery();
-        if (proIndex >= TasksObjects.Length)
-        {
-            LevelComplete();
-        }
-        else
+        if (!(proIndex >= TasksObjects.Length))
         {
             //Debug.Log(images[index]);
             images[index].sprite = TasksObjects[proIndex].sprite;
             currentTasks[index] = TasksObjects[proIndex];
             proIndex++;
+        }
+        else 
+        {
+            images[index].sprite = null;
+            currentTasks[index] = null;
         }
 
     }
@@ -45,5 +57,6 @@ public class TaskManager : MonoBehaviour
     void LevelComplete()
     {
         Debug.Log("level bitti digerine gec");
+
     }
 }
