@@ -9,6 +9,18 @@ EditorBuildSettings:
     path: Assets/Oguz/MainMenu.unity
     guid: 7ac58c356234584448d2403c68cf26b6
   - enabled: 1
+    path: Assets/SON/Level1.unity
+    guid: 7a8d36f70355116488f6484ebe09e263
+  - enabled: 1
+    path: Assets/SON/Level2.unity
+    guid: 62adfb1beb5dc634e9bcfe15b4d161bd
+  - enabled: 1
+    path: Assets/SON/Level3.unity
+    guid: d0fbbe9d88b4e3e44a5d2734d96cc9fc
+  - enabled: 1
+    path: Assets/SON/Level4.unity
+    guid: 52aa1df5e0b1c8744996be3fc1990880
+  - enabled: 1
     path: Assets/Oguz/GoodEnding.unity
     guid: c5746e60f9c68714bbe93f9365a03ee5
   - enabled: 1
