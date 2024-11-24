@@ -80,6 +80,7 @@ public class Converter : MonoBehaviour
                 Debug.Log(resource.name);
                 if(set.TryGetValue(resource.name, out int value))
                 {
+                    Debug.Log(value);
                     productNum += value;
                 }
                 Destroy(resource.gameObject);
