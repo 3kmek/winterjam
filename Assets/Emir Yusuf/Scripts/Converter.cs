@@ -57,7 +57,6 @@ public class Converter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
         if (other != null)
         {
             resources.Add(other.gameObject);

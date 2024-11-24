@@ -6,8 +6,8 @@ public class Battery : MonoBehaviour
 {
     [SerializeField] float batteryMax = 100f;
     [SerializeField] float decreaseRatio = 0.5f;
+    [SerializeField] float chargeAmount = 2.0f;
     [SerializeField] Slider slider;
-
     // Update is called once per frame
     void Update()
     {
@@ -21,9 +21,15 @@ public class Battery : MonoBehaviour
         return batteryMax < 0;
     }
 
-    public void IncreaseBattery(float amount)
+    public void ChangeBattery(float amount)
     {
         batteryMax += amount;
-        batteryMax = batteryMax % 100;
+        batteryMax = batteryMax>100 ? 100 : batteryMax;
+    }
+
+    public void IncreaseBattery()
+    {
+        batteryMax += chargeAmount;
+        batteryMax = batteryMax > 100 ? 100 : batteryMax;
     }
 }

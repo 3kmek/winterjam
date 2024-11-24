@@ -122,6 +122,8 @@ MonoBehaviour:
   Resources:
   - {fileID: 485940718864684618, guid: e889ddec4033f154cb9244cb819df98f, type: 3}
   - {fileID: 6729608211200684366, guid: ba9b6c5403cce604a983359cd22f105e, type: 3}
+  sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  NAME: matryoshkadoll
 --- !u!54 &-8752658954044411862
 Rigidbody:
   m_ObjectHideFlags: 0
