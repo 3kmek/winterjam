@@ -10,6 +10,8 @@ public class OrganicAnim : MonoBehaviour
     public float interactionDistance = 6f; // Lever'a yaklaşma mesafesi
     private bool isPlayerNearby = false; // Oyuncu lever yakınında mı?
     private bool isLookingAtLever = false; // Oyuncu lever'a mı bakıyor?
+
+    [SerializeField] private Transform shu;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class OrganicAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(player.position, transform.position);
+        float distance = Vector3.Distance(player.position, shu.position);
 
         // Oyuncu lever'a yakın mı?
         isPlayerNearby = distance <= interactionDistance;
@@ -29,7 +31,7 @@ public class OrganicAnim : MonoBehaviour
         if (isPlayerNearby)
         {
             // Oyuncunun bakış yönü
-            Vector3 directionToLever = (transform.position - player.position).normalized;
+            Vector3 directionToLever = (shu.position - player.position).normalized;
             float dotProduct = Vector3.Dot(player.forward, directionToLever);
 
             // Oyuncu lever'a doğru bakıyor mu?
@@ -45,12 +47,12 @@ public class OrganicAnim : MonoBehaviour
             else
             {
                 interactText.gameObject.SetActive(false); // Yazıyı gizle
-                leverAnimator.SetTrigger("OrganicPull");
+                leverAnimator.SetTrigger("OrganicNotPull");
             }
         }
         else
         {
-            leverAnimator.SetTrigger("OrganicPull");
+            leverAnimator.SetTrigger("OrganicNotPull");
             interactText.gameObject.SetActive(false); // Yazıyı gizle
         }
     }
