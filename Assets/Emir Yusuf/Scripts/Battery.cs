@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,11 @@ public class Battery : MonoBehaviour
     [SerializeField] public LevelManager levelManager;
 
     // Update is called once per frame
+    private void Start()
+    {
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+    }
+
     void Update()
     {
         batteryMax -= decreaseRatio* Time.deltaTime;
