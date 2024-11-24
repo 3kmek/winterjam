@@ -1640,7 +1640,8 @@ MonoBehaviour:
   - {fileID: 745217450}
   - {fileID: 1605592206205340119, guid: 214ac355daf9e474d8b92d0f6e407fc4, type: 3}
   - {fileID: 7382882068045415499, guid: 0526209ce94ea3141bba18f38d638a48, type: 3}
-  - {fileID: 7382882068045415499, guid: 0526209ce94ea3141bba18f38d638a48, type: 3}
+  - {fileID: 351079514851629801, guid: 0bfe3225f49009b49bc33444dbdfd766, type: 3}
+  - {fileID: 2226254157194438268, guid: c9404559412f95b4b9a759a2bf9b2637, type: 3}
   images:
   - {fileID: 2082515900}
   - {fileID: 1791548124}
@@ -2065,6 +2066,7 @@ MonoBehaviour:
   decreaseRatio: 0.5
   chargeAmount: 2
   slider: {fileID: 1574150003}
+  decreaseAmount: 2
 --- !u!1 &2082515898
 GameObject:
   m_ObjectHideFlags: 0

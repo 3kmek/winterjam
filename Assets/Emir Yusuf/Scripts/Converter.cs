@@ -82,10 +82,9 @@ public class Converter : MonoBehaviour
                 {
                     productNum += value;
                 }
-                resources.Remove(resource);
                 Destroy(resource.gameObject);
             }
-
+            resources.Clear();
             if(productSet.TryGetValue(productNum,out int index))
             {
                 Instantiate(products[index], ProductSpawner.transform.position, Quaternion.identity);
