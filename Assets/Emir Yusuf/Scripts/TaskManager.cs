@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TaskManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class TaskManager : MonoBehaviour
     bool notNull=false;
     
     [SerializeField] LevelManager levelManager;
+    [SerializeField] Manager manager;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +66,21 @@ public class TaskManager : MonoBehaviour
     void LevelComplete()
     {
         Debug.Log("level bitti digerine gec");
+        if (SceneManager.GetActiveScene().name == "Level5")
+        {
+            if (manager.İyiSkor >= manager.KötüSkor)
+            {
+                SceneManager.LoadScene("GoodEnding");
+            }
+            if (manager.KötüSkor > manager.İyiSkor)
+            {
+                SceneManager.LoadScene("BadEnding");
+            }
+        }
+        else
+        {
+            levelManager.NextLevel();
+        }
         
-        levelManager.NextLevel();
     }
 }
