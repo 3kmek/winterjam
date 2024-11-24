@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Gruna Marka \xC7anta"
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2a855e83fbd54648baffea0ecf6be6f, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 1094777496736005163, guid: a2a855e83fbd54648baffea0ecf6be6f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

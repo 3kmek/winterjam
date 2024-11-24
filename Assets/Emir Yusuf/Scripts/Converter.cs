@@ -95,6 +95,7 @@ public class Converter : MonoBehaviour
             {
                 Instantiate(Garbage, ProductSpawner.transform.position, Quaternion.identity);
             }
+            productNum = 0;
         }
         
 

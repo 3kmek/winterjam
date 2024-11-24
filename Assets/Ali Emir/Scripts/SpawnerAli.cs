@@ -38,15 +38,22 @@ public class SpawnerAli : MonoBehaviour
         RaySpeed = belt.GetComponent<ConveyorBelt>().RaySpeed;
         if (RaySpeed > 0)
         {
+            
+            
             if (spawnedMeat < meats.Length && i%9==0)
             {
+                i++;
+                
                 Instantiate(meats[spawnedMeat], transform.position, Quaternion.identity);
+                spawnedMeat++;
             }
             else if (hedefZaman < Time.time)
-            {
+            {   i++;
                 Spawn();
                 hedefZaman = Time.time + Cooldown;
             }
+            Debug.Log(i);
+            Debug.Log(spawnedMeat);
         }
     }
 
