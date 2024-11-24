@@ -57,7 +57,7 @@ public class Converter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other != null && !other.CompareTag("Player"))
+        if (other != null && !other.CompareTag("Player") && other.CompareTag("Interactable"))
         {
             resources.Add(other.gameObject);
         }

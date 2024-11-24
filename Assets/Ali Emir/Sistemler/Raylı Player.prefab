@@ -2421,6 +2421,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3541096323419506646}
     m_Modifications:
     - target: {fileID: 1155837044920044359, guid: 2ad34552e8807f74fb1eec7530c8ec92, type: 3}
+      propertyPath: Garbage
+      value: 
+      objectReference: {fileID: 1666909756522875824, guid: acdf1a1ef09d8b342a6d028c543b6925, type: 3}
+    - target: {fileID: 1155837044920044359, guid: 2ad34552e8807f74fb1eec7530c8ec92, type: 3}
       propertyPath: products.Array.data[0]
       value: 
       objectReference: {fileID: 5408679129168039063, guid: dbd665d53765e2e4d9031c8616e0c4b4, type: 3}
