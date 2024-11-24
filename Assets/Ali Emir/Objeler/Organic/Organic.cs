@@ -13,11 +13,6 @@ public class Organic : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<LEl>())
-        {
-            other.gameObject.SetActive(false);
-            OcagaAtılan +=1 ;
-        }
         
         if (other.gameObject.GetComponent<REl>())
         {
@@ -31,7 +26,12 @@ public class Organic : MonoBehaviour
             OcagaAtılan +=1 ;
         }
         
-        if (other.gameObject.GetComponent<LeftLeg>())
+        if (other.gameObject.GetComponent<Head>())
+        {
+            other.gameObject.SetActive(false);
+            OcagaAtılan +=1 ;
+        }
+        if (other.gameObject.GetComponent<Body>())
         {
             other.gameObject.SetActive(false);
             OcagaAtılan +=1 ;
