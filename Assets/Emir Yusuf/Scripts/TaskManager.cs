@@ -11,6 +11,8 @@ public class TaskManager : MonoBehaviour
     public List<Product> currentTasks = new List<Product>();
     int proIndex;
     bool notNull=false;
+    
+    [SerializeField] LevelManager levelManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class TaskManager : MonoBehaviour
         currentTasks.Add(TasksObjects[1]);
         currentTasks.Add(TasksObjects[2]);
         proIndex = 3;
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
     }
 
     private void Update()
@@ -61,6 +64,7 @@ public class TaskManager : MonoBehaviour
     void LevelComplete()
     {
         Debug.Log("level bitti digerine gec");
-
+        
+        levelManager.NextLevel();
     }
 }

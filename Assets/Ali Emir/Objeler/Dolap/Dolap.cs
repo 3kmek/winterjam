@@ -9,6 +9,8 @@ public class Dolap : MonoBehaviour
     [SerializeField] private GameObject LeftEl, RightEl, LeftLeg, RightLeg, Body, Head;
 
     [SerializeField] public int DolabaAtilan = 0;
+
+    [SerializeField] public Manager Manager;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,14 +34,14 @@ public class Dolap : MonoBehaviour
             {
                 other.gameObject.SetActive(false);
                 LeftEl.SetActive(true);
-                DolabaAtilan += 1;
+                Manager.İyiSkor += 1;
             }
 
             else
             {
                 other.gameObject.SetActive(false);
                 RightEl.SetActive(true);
-                DolabaAtilan += 1;
+                Manager.İyiSkor  += 1;
             }
             
         }
@@ -53,14 +55,14 @@ public class Dolap : MonoBehaviour
             if (RightLeg.activeSelf)
             {
                 other.gameObject.SetActive(false);
-                DolabaAtilan += 1;
+                Manager.İyiSkor  += 1;
                 LeftLeg.SetActive(true);
             }
             else
             {
                 other.gameObject.SetActive(false);
                 RightLeg.SetActive(true);
-                DolabaAtilan += 1;
+                Manager.İyiSkor  += 1;
             }
         }
         
@@ -72,14 +74,14 @@ public class Dolap : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             Head.SetActive(true);
-            DolabaAtilan += 1;
+            Manager.İyiSkor  += 1;
         }
         
         if (other.gameObject.GetComponent<Body>())
         {
             other.gameObject.SetActive(false);
             Body.SetActive(true);
-            DolabaAtilan += 1;
+            Manager.İyiSkor += 1;
         }
     }
 }
