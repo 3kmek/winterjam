@@ -414,6 +414,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2041796880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903606463750095129, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+  m_PrefabInstance: {fileID: 4490863980712505546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3704008893338648704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -483,6 +488,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Rayl\u0131 Player"
       objectReference: {fileID: 0}
+    - target: {fileID: 1889559798734601683, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Size.x
+      value: 0.019744331
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889559798734601683, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Size.y
+      value: 0.016219737
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889559798734601683, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Size.z
+      value: 0.023119804
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889559798734601683, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0006482149
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889559798734601683, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Center.y
+      value: -0.00091580005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889559798734601683, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0002556896
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027053024597950791, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027053024597950791, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3541096323419506646, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.74
@@ -523,10 +560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5431095293268402804, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
-      propertyPath: matters.Array.data[6]
+    - target: {fileID: 4726379957653203886, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: battery
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2041796880}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
