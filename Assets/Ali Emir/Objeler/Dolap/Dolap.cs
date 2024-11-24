@@ -44,22 +44,7 @@ public class Dolap : MonoBehaviour
             
         }
         
-        if (other.gameObject.GetComponent<RightLeg>())
-        {
-            
-            if (RightLeg.activeSelf)
-            {
-                other.gameObject.SetActive(false);
-                DolabaAtilan += 1;
-                LeftLeg.SetActive(true);
-            }
-            else
-            {
-                other.gameObject.SetActive(false);
-                RightLeg.SetActive(true);
-                DolabaAtilan += 1;
-            }
-        }
+        
         
         
         if (other.gameObject.GetComponent<RightLeg>())
