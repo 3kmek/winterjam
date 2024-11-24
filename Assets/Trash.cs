@@ -19,6 +19,6 @@ public class Trash : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        if(!other.CompareTag("Player")){Destroy(other.gameObject);}
     }
 }
