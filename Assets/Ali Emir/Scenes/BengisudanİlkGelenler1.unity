@@ -560,32 +560,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.371657, y: 0.36844802, z: 0.116411984}
   m_Center: {x: -0.080262356, y: 0.098688036, z: 0.012799865}
---- !u!1 &2133424447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3519647330943118457, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
-  m_PrefabInstance: {fileID: 4490863980712505546}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2133424453
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133424447}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.4866369, y: 3.4418302, z: 3.7856658}
-  m_Center: {x: -1.2433188, y: 2.316534, z: -9.629706}
 --- !u!1001 &3704008893338648704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -655,6 +629,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Rayl\u0131 Player"
       objectReference: {fileID: 0}
+    - target: {fileID: 2584144779106330844, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: battery
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584144779106330844, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: TasksObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3027053024597950791, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -703,13 +685,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4383734408809638911, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4610846
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383734408809638911, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Size.z
+      value: 3.7856653
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383734408809638911, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Center.x
+      value: -0.23054242
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383734408809638911, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: m_Center.z
+      value: -9.629716
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3519647330943118457, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2133424453}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
