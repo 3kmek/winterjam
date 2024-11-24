@@ -18,16 +18,16 @@ public class Converter : MonoBehaviour
     void Start()
     {   int tempValue = 0;
         
-        set.Add("paper",  0000000001);
-        set.Add("plastic",0000000010);
-        set.Add("fabric", 0000000100);
-        set.Add("leather",0000001000);
-        set.Add("paint",  0000010000);
-        set.Add("metal",  0000100000);
-        set.Add("wood",   0001000000);
-        set.Add("cable",  0010000000);
-        set.Add("coal",   0100000000);
-        set.Add("glass",  1000000000);
+        set.Add("paper(Clone)",  0000000001);
+        set.Add("plastic(Clone)", 0000000010);
+        set.Add("fabric(Clone)", 0000000100);
+        set.Add("leather(Clone)", 0000001000);
+        set.Add("paint(Clone)",  0000010000);
+        set.Add("metal(Clone)",  0000100000);
+        set.Add("wood(Clone)",   0001000000);
+        set.Add("cable(Clone)",  0010000000);
+        set.Add("coal(Clone)",   0100000000);
+        set.Add("glass(Clone)",  1000000000);
         int i = 0;
         foreach (var item in products)
         {
