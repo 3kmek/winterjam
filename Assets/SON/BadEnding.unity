@@ -538,6 +538,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ca60fef71a4a1f949bf819cd284d356a, type: 3}
   - {fileID: 21300000, guid: 72f58c8e667fef14d951f598fd91448a, type: 3}
   - {fileID: 21300000, guid: ced18fc2c984b1944a594c56240b837c, type: 3}
+  mainMenuSceneName: "MainMenuAs\u0131l"
 --- !u!4 &837181155
 Transform:
   m_ObjectHideFlags: 0

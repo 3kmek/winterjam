@@ -59,7 +59,7 @@ public class ImageViewer : MonoBehaviour
     {
         // Example fade effect: Implement your actual fade logic here.
         Debug.Log("Fading to Main Menu...");
-        yield return new WaitForSeconds(1f); // Simulate fade duration
+        yield return new WaitForSeconds(0.5f); // Simulate fade duration
         SceneManager.LoadScene(mainMenuSceneName);
     }
 }
