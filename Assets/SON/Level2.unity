@@ -544,9 +544,13 @@ PrefabInstance:
       value: "Rayl\u0131 Player"
       objectReference: {fileID: 0}
     - target: {fileID: 2584144779106330844, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
+      propertyPath: TasksObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584144779106330844, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: TasksObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 4463112647483184966, guid: de8cd4c9cc2350d4b96826e6303f11e3, type: 3}
+      objectReference: {fileID: -3657079380444287167, guid: 77e786cd31d73304090892e31f715a3d, type: 3}
     - target: {fileID: 2584144779106330844, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: TasksObjects.Array.data[1]
       value: 
@@ -554,7 +558,7 @@ PrefabInstance:
     - target: {fileID: 2584144779106330844, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: TasksObjects.Array.data[2]
       value: 
-      objectReference: {fileID: -2922357968763182683, guid: de415c5802861ca4ea59212391198d33, type: 3}
+      objectReference: {fileID: 5408679129168039063, guid: dbd665d53765e2e4d9031c8616e0c4b4, type: 3}
     - target: {fileID: 2584144779106330844, guid: 9c4923f80da1eca439f37a6a6ba19fbf, type: 3}
       propertyPath: TasksObjects.Array.data[3]
       value: 

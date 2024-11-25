@@ -6,6 +6,9 @@ public class Organic : MonoBehaviour
 {
     [SerializeField] public int OcagaAtılan = 0;
     [SerializeField] public Manager Manager;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,24 +21,24 @@ public class Organic : MonoBehaviour
         if (other.gameObject.GetComponent<REl>())
         {
             other.gameObject.SetActive(false);
-            Manager.KötüSkor +=1 ;
+            PuanManager.kotuPuan += 1;
         }
         
         if (other.gameObject.GetComponent<RightLeg>())
         {
             other.gameObject.SetActive(false);
-            Manager.KötüSkor +=1 ;
+            PuanManager.kotuPuan += 1;
         }
         
         if (other.gameObject.GetComponent<Head>())
         {
             other.gameObject.SetActive(false);
-            Manager.KötüSkor +=1 ;
+            PuanManager.kotuPuan += 1; ;
         }
         if (other.gameObject.GetComponent<Body>())
         {
             other.gameObject.SetActive(false);
-            Manager.KötüSkor +=1 ;
+            PuanManager.kotuPuan += 1;
         }
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Belt
   - LevelManager
   - Manager
+  - level5
   layers:
   - Default
   - TransparentFX

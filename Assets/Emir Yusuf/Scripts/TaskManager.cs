@@ -15,16 +15,41 @@ public class TaskManager : MonoBehaviour
     
     [SerializeField] LevelManager levelManager;
     [SerializeField] Manager manager;
+
+    [SerializeField] private GameObject level5Gb;
     
     // Start is called before the first frame update
     void Start()
     {
-        images[0].sprite = TasksObjects[0].sprite;
-        images[1].sprite = TasksObjects[1].sprite;
-        images[2].sprite = TasksObjects[2].sprite;
-        currentTasks.Add(TasksObjects[0]);
-        currentTasks.Add(TasksObjects[1]);
-        currentTasks.Add(TasksObjects[2]);
+        switch (TasksObjects.Length)
+        {
+            
+            case 0:
+                break;
+            case 1:
+                images[0].sprite = TasksObjects[0].sprite;
+                currentTasks.Add(TasksObjects[0]);
+                images[1].enabled = false;
+                images[2].enabled = false;
+                break;
+            case 2:
+                images[1].sprite = TasksObjects[1].sprite;
+                images[0].sprite = TasksObjects[0].sprite;
+                currentTasks.Add(TasksObjects[0]);
+                currentTasks.Add(TasksObjects[1]);
+                images[2].enabled = false;
+                break;
+            default:
+                images[0].sprite = TasksObjects[0].sprite;
+                images[1].sprite = TasksObjects[1].sprite;
+                images[2].sprite = TasksObjects[2].sprite;
+                currentTasks.Add(TasksObjects[0]);
+                currentTasks.Add(TasksObjects[1]);
+                currentTasks.Add(TasksObjects[2]);
+                break;
+
+        }
+        
         proIndex = 3;
         levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
         
@@ -33,6 +58,7 @@ public class TaskManager : MonoBehaviour
 
     private void Update()
     {
+        level5Gb = GameObject.FindGameObjectWithTag("level5");
         notNull = false;
         for (int i = 0;i < currentTasks.Count; i++)
         {
@@ -71,7 +97,7 @@ public class TaskManager : MonoBehaviour
         Debug.Log("level bitti digerine gec");
         if (SceneManager.GetActiveScene().name == "Level5")
         {
-            levelManager.BadEnding();
+            level5Gb.GetComponent<Level5>().SonuKontrolEt();
             
         }
         else

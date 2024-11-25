@@ -13,6 +13,7 @@ public class Lever : MonoBehaviour
     private bool isPlayerNearby = false; // Oyuncu lever yakınında mı?
     private bool isLookingAtLever = false; // Oyuncu lever'a mı bakıyor?
     [SerializeField] private GameObject battery;
+    [SerializeField] GameObject kardes;
 
 
     private GameObject belt;
@@ -25,7 +26,7 @@ public class Lever : MonoBehaviour
 
     void Update()
     {
-        float distance = Vector3.Distance(player.position, transform.position);
+        float distance = Vector3.Distance(player.position, kardes.transform.position);
 
         // Oyuncu lever'a yakın mı?
         isPlayerNearby = distance <= interactionDistance;
@@ -33,7 +34,7 @@ public class Lever : MonoBehaviour
         if (isPlayerNearby)
         {
             // Oyuncunun bakış yönü
-            Vector3 directionToLever = (transform.position - player.position).normalized;
+            Vector3 directionToLever = (kardes.transform.position - player.position).normalized;
             float dotProduct = Vector3.Dot(player.forward, directionToLever);
 
             // Oyuncu lever'a doğru bakıyor mu?
@@ -67,6 +68,6 @@ public class Lever : MonoBehaviour
     {
         // Interaction mesafesi için bir daire çiz
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, interactionDistance);
+        Gizmos.DrawWireSphere(kardes.transform.position, interactionDistance);
     }
 }

@@ -15,14 +15,15 @@ public class LevelManager : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Level5")
             {
-                if (Manager.İyiSkor >= Manager.KötüSkor)
-                {
-                    SceneManager.LoadScene("GoodEnding");
-                }
-                if (Manager.KötüSkor > Manager.İyiSkor)
-                {
-                    SceneManager.LoadScene("BadEnding");
-                }
+                // if (Manager.İyiSkor >= Manager.KötüSkor)
+                // {
+                //     SceneManager.LoadScene("GoodEnding");
+                // }
+                // if (Manager.KötüSkor > Manager.İyiSkor)
+                // {
+                //     SceneManager.LoadScene("BadEnding");
+                // }
+                return;
             }
             else
             {
