@@ -45,7 +45,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../OverClocked/OverClocked.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../OverClocked\OverClocked.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\aliem\Desktop\OverClocked" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -105,7 +105,7 @@
       <updated>1732424161141</updated>
       <workItem from="1732424165870" duration="24861000" />
       <workItem from="1732543661735" duration="1381000" />
-      <workItem from="1732577792309" duration="349000" />
+      <workItem from="1732577792309" duration="885000" />
     </task>
     <servers />
   </component>
