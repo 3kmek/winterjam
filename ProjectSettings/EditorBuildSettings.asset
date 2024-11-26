@@ -15,11 +15,11 @@ EditorBuildSettings:
     path: Assets/SON/Level5.unity
     guid: 310754c003c7ba646b3711648c2af8de
   - enabled: 1
-    path: Assets/Oguz/GoodEnding.unity
-    guid: c5746e60f9c68714bbe93f9365a03ee5
+    path: Assets/SON/GoodEnding.unity
+    guid: 27730f39d523b5141a2309e3c3378ea9
   - enabled: 1
-    path: Assets/Oguz/BadEnding.unity
-    guid: b4adf7cbdb621134e858db62286f2dfd
+    path: Assets/SON/BadEnding.unity
+    guid: e4c3bfc0ad60a7b4281697f7aa706f3a
   - enabled: 1
     path: Assets/SON/GameOver.unity
     guid: 3546059ca55180e46a627313ebb99970
