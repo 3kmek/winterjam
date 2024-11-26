@@ -18,6 +18,8 @@ public class TutorialDialog : MonoBehaviour
     private Coroutine typingCoroutine;
     private AudioSource audioSource;
 
+    [SerializeField] private Battery battery;
+    [SerializeField] private PlayerMovement playerMovement;
     void Start()
     {
         // Get or Add AudioSource component
@@ -103,6 +105,8 @@ public class TutorialDialog : MonoBehaviour
         dialogBox.SetActive(false);
         TutUI.SetActive(false);
         Debug.Log("Tutorial completed! Gameplay starts.");
+        battery.GetComponent<Battery>().enabled = true;
+        playerMovement.GetComponent<PlayerMovement>().enabled = true;
         // Enable player controls or start the main game logic here
     }
 }

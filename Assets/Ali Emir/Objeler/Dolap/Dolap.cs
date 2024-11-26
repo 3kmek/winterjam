@@ -85,4 +85,7 @@ public class Dolap : MonoBehaviour
             PuanManager.iyiPuan += 1;
         }
     }
+    
+    
+    
 }

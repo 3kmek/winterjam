@@ -54,4 +54,11 @@ public class DolapAnim : MonoBehaviour
             interactText.gameObject.SetActive(false); // Yazıyı gizle
         }
     }
+    
+    private void OnDrawGizmosSelected()
+    {
+        // Interaction mesafesi için bir daire çiz
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, interactionDistance);
+    }
 }
