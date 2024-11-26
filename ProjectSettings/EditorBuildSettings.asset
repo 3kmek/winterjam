@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Oguz/MainMenuAs\u0131l.unity"
-    guid: 7fa3f27b2386c4c4a9a53150f9f87f18
+    path: "Assets/SON/MainMenuAs\u0131l.unity"
+    guid: 865c4455d1964f14693ac1fad4f55a64
   - enabled: 1
     path: Assets/SON/Level1.unity
     guid: 52aa1df5e0b1c8744996be3fc1990880
