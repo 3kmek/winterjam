@@ -773,8 +773,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ali Emir Ar\u0131kan\nEmir Yusuf Bolhocal\u0131oglu\nBengisu G\xFCnes\nG\xFCzin
-    K\u0131l\u0131\xE7\nBaran Coskun\nYunus Emre Demirbas\nOguzcan Task\u0131n\nOsman
+  m_text: "Ali Emir Ar\u0131kan\nEmir Yusuf Bolhocal\u0131oglu\nBengisu Gunes\nGuzin
+    K\u0131l\u0131c\nBaran Coskun\nYunus Emre Demirbas\nOguzcan Task\u0131n\nOsman
     Gelmez"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e916748cdfa1ce4f8c6183ffb248f7f, type: 2}
