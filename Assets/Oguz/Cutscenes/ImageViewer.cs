@@ -8,7 +8,7 @@ public class ImageViewer : MonoBehaviour
     [Header("Image Settings")]
     [SerializeField] private Image displayImage; // The UI Image component to show images
     [SerializeField] private Sprite[] images; // Array of images to cycle through
-    [SerializeField] private string mainMenuSceneName = "MainMenu"; // Name of the main menu scene
+    [SerializeField] private string mainMenuSceneName = "MainMenuAsıl"; // Name of the main menu scene
 
     private int currentImageIndex = 0; // Keeps track of the current image
 
@@ -59,7 +59,7 @@ public class ImageViewer : MonoBehaviour
     {
         // Example fade effect: Implement your actual fade logic here.
         Debug.Log("Fading to Main Menu...");
-        yield return new WaitForSeconds(0.5f); // Simulate fade duration
+        yield return new WaitForSeconds(0f); // Simulate fade duration
         SceneManager.LoadScene(mainMenuSceneName);
     }
 }
