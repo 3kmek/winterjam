@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Organic : MonoBehaviour
 {
-    [SerializeField] public int OcagaAtılan = 0;
-    [SerializeField] public Manager Manager;
+    
 
     [SerializeField] Battery battery;
 

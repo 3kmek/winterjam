@@ -3222,9 +3222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5260bb9349e234ea3e43a0ee104f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "OcagaAt\u0131lan": 0
-  Manager: {fileID: 0}
-  battery: {fileID: 0}
+  battery: {fileID: 2252272987203884530}
 --- !u!65 &4383734408809638911
 BoxCollider:
   m_ObjectHideFlags: 0
