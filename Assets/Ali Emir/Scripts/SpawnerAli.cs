@@ -52,8 +52,7 @@ public class SpawnerAli : MonoBehaviour
                 Spawn();
                 hedefZaman = Time.time + Cooldown;
             }
-            Debug.Log(i);
-            Debug.Log(spawnedMeat);
+            
         }
     }
 
@@ -122,7 +121,6 @@ public class SpawnerAli : MonoBehaviour
         }
         random -= GlassRate;
         
-        Debug.Log("spawn failed");
        
     }
 
@@ -172,7 +170,6 @@ public class SpawnerAli : MonoBehaviour
                 o.name = obj;
                 break;
              default:
-                Debug.Log("oh noooo");
                 break;
         }
     }

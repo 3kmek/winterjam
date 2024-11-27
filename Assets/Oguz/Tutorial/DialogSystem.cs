@@ -104,7 +104,6 @@ public class TutorialDialog : MonoBehaviour
         audioSource.Stop();
         dialogBox.SetActive(false);
         TutUI.SetActive(false);
-        Debug.Log("Tutorial completed! Gameplay starts.");
         battery.GetComponent<Battery>().enabled = true;
         playerMovement.GetComponent<PlayerMovement>().enabled = true;
         // Enable player controls or start the main game logic here

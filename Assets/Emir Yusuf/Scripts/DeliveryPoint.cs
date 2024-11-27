@@ -23,7 +23,6 @@ public class DeliveryPoint : MonoBehaviour
     {
         if (other != null)
         {
-            Debug.Log(other.name);
             deliveries.Add(other.gameObject);
         }
     }
@@ -40,7 +39,6 @@ public class DeliveryPoint : MonoBehaviour
     {
         foreach (GameObject go in deliveries)
         {
-            Debug.Log(go.name);
             if (go)
             {
                 int i = Index(taskManager.currentTasks, go.GetComponent<Product>());
@@ -69,7 +67,6 @@ public class DeliveryPoint : MonoBehaviour
         {
             if (lst[i].NAME == itm.NAME)
             {
-                Debug.Log(i);
                 return i;
             }
         }

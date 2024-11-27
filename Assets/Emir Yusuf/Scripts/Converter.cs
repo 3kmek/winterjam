@@ -77,15 +77,12 @@ public class Converter : MonoBehaviour
         {
             foreach (GameObject resource in resources) 
             {
-                Debug.Log(resource.name);
                 if(set.TryGetValue(resource.name, out int value))
                 {
-                    Debug.Log(value);
                     productNum += value;
                 }
                 Destroy(resource.gameObject);
             }
-            Debug.Log(productNum);
             resources.Clear();
             if(productSet.TryGetValue(productNum,out int index))
             {

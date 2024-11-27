@@ -58,7 +58,6 @@ public class Tezgah : MonoBehaviour
         {
             if (lst[i]&& lst[i].NAME == itm.NAME)
             {
-                Debug.Log(i);
                 return i;
             }
         }

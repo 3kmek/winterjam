@@ -50,7 +50,7 @@ public class HoldObjectAli : MonoBehaviour
         {
             heldObject = interactObject.GetComponent<Rigidbody>();
             isHolding = true;
-            Debug.Log(interactObject.transform.gameObject.name);
+            
             heldObject.useGravity = false;
             heldObject.GetComponent<Collider>().enabled = false;
         }

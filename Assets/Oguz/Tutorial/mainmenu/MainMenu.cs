@@ -10,7 +10,6 @@ public class MainMenu : MonoBehaviour
     // Method to start the game
     public void StartGame()
     {
-        Debug.Log("Starting the game...");
         SceneManager.LoadScene(gameSceneName); // Load the game scene
         creditsPanel.SetActive(false);
     }
@@ -19,35 +18,30 @@ public class MainMenu : MonoBehaviour
     // Method to open the credits panel
     public void OpenCredits()
     {
-        Debug.Log("Opening credits...");
         if (creditsPanel != null)
         {
             creditsPanel.SetActive(true); // Show the credits panel
         }
         else
         {
-            Debug.LogWarning("Credits panel is not assigned!");
         }
     }
 
     // Method to close the credits panel
     public void CloseCredits()
     {
-        Debug.Log("Closing credits...");
         if (creditsPanel != null)
         {
             creditsPanel.SetActive(false); // Hide the credits panel
         }
         else
         {
-            Debug.LogWarning("Credits panel is not assigned!");
         }
     }
 
     // Method to quit the application
     public void QuitGame()
     {
-        Debug.Log("Quitting the game...");
         Application.Quit(); // Exits the application
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;

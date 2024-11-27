@@ -94,7 +94,6 @@ public class TaskManager : MonoBehaviour
 
     void LevelComplete()
     {
-        Debug.Log("level bitti digerine gec");
         if (SceneManager.GetActiveScene().name == "Level5")
         {
             level5Gb.GetComponent<Level5>().SonuKontrolEt();

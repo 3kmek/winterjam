@@ -21,7 +21,6 @@ public class ImageViewer : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Please assign images and the Image component in the Inspector.");
         }
     }
 
@@ -58,7 +57,6 @@ public class ImageViewer : MonoBehaviour
     private IEnumerator FadeToMainMenu()
     {
         // Example fade effect: Implement your actual fade logic here.
-        Debug.Log("Fading to Main Menu...");
         yield return new WaitForSeconds(0f); // Simulate fade duration
         SceneManager.LoadScene(mainMenuSceneName);
     }

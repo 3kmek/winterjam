@@ -35,7 +35,6 @@ public class HoldObjectEskiAli : MonoBehaviour
                     isHolding = true;
                     RotateObjectToPlayer(hit.transform);
 
-                    Debug.Log(hit.transform.gameObject.name);
                     hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                     holdingObject = hit.transform.gameObject;
 
@@ -60,7 +59,6 @@ public class HoldObjectEskiAli : MonoBehaviour
         // Sol tık bırakıldığında
         if (Input.GetKeyUp(KeyCode.Mouse0) && holdingObject != null)
         {
-            Debug.Log(holdingObject.name);
             holdingObject.GetComponent<Rigidbody>().isKinematic = false;
             holdingObject = null;
         }

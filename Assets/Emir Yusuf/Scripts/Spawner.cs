@@ -94,7 +94,6 @@ public class Spawner : MonoBehaviour
         }
         random -= GlassRate;
         
-        Debug.Log("spawn failed");
        
     }
 
@@ -133,7 +132,6 @@ public class Spawner : MonoBehaviour
                 Instantiate(matters[9], transform.position, Quaternion.identity);
                 break;
              default:
-                Debug.Log("oh noooo");
                 break;
         }
     }

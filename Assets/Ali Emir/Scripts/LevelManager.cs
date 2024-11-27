@@ -33,7 +33,6 @@ public class LevelManager : MonoBehaviour
         else
         {
             // Eğer başka sahne yoksa, oyun sonu ekranı veya ana menüye dön
-            Debug.Log("Tüm bölümler tamamlandı!");
             // Örneğin ana menüye dönmek isterseniz:
             // SceneManager.LoadScene("AnaMenu");
         }

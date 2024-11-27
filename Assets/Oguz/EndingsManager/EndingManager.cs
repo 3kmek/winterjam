@@ -21,13 +21,11 @@ public class EndingManager : MonoBehaviour
 
     void LoadGoodEnding()
     {
-        Debug.Log("Good Ending Triggered!");
         SceneManager.LoadScene(goodEndingScene);
     }
 
     void LoadBadEnding()
     {
-        Debug.Log("Bad Ending Triggered!");
         SceneManager.LoadScene(badEndingScene);
     }
 }
