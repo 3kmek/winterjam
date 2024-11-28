@@ -53,7 +53,7 @@ public class TaskManager : MonoBehaviour
         proIndex = 3;
         levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
         
-        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager>();
+        
     }
 
     private void Update()
