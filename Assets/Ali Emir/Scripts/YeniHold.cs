@@ -12,6 +12,9 @@ public class YeniHold : MonoBehaviour
 
     // 'Hold Left Click' mesajı için TextMeshPro
     public TextMeshProUGUI holdLeftClickText;
+    
+    private Material lastHighlightedMaterial;
+    private float originalScale = 1.0f;
 
     void Update()
     {
@@ -42,40 +45,60 @@ public class YeniHold : MonoBehaviour
     }
 
     void HandleHighlighting()
+{
+    // Eğer bir obje tutuyorsak, mesajı göstermeyelim
+    if (heldObject != null)
     {
-        // Eğer bir obje tutuyorsak, mesajı göstermeyelim
-        if (heldObject != null)
+        if (holdLeftClickText != null)
         {
-            if (holdLeftClickText != null)
-            {
-                holdLeftClickText.gameObject.SetActive(false);
-            }
-            return;
+            holdLeftClickText.gameObject.SetActive(false);
         }
+        return;
+    }
 
-        // Kamera'dan mouse pozisyonuna doğru bir ray at
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, pickUpRange))
+    // Kamera'dan mouse pozisyonuna doğru bir ray at
+    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    if (Physics.Raycast(ray, out RaycastHit hit, pickUpRange))
+    {
+        if (hit.collider.CompareTag("Interactable"))
         {
-            if (hit.collider.CompareTag("Interactable"))
+            holdLeftClickText.gameObject.SetActive(true);
+            MeshRenderer renderer = hit.collider.gameObject.GetComponent<MeshRenderer>();
+            if (renderer != null && renderer.materials.Length > 1)
             {
-                // 'Hold Left Click' mesajını göster
-                if (holdLeftClickText != null)
+                Material material = renderer.materials[1];
+                if (material != null)
                 {
-                    holdLeftClickText.gameObject.SetActive(true);
-                }
-            }
-            else
-            {
-                // Mesajı gizle
-                if (holdLeftClickText != null)
-                {
-                    holdLeftClickText.gameObject.SetActive(false);
+                    // Daha önce bir materyal vurgulandıysa eski haline döndür
+                    if (lastHighlightedMaterial != null && lastHighlightedMaterial != material)
+                    {
+                        ResetMaterialScale(lastHighlightedMaterial);
+                    }
+
+                    // Yeni materyalin scale'ini değiştir
+                    if (material.HasProperty("_Scale"))
+                    {
+                        material.SetFloat("_Scale", 1.01f);
+                        lastHighlightedMaterial = material; // Şu anki materyali kaydet
+                    }
+
+                    // Mesajı göster
+                    if (holdLeftClickText != null)
+                    {
+                        holdLeftClickText.gameObject.SetActive(true);
+                    }
                 }
             }
         }
         else
         {
+            // Eğer ray başka bir şey vurursa, önceki materyalin scale'ini sıfırla
+            if (lastHighlightedMaterial != null)
+            {
+                ResetMaterialScale(lastHighlightedMaterial);
+                lastHighlightedMaterial = null; // Vurgulanan materyali sıfırla
+            }
+
             // Mesajı gizle
             if (holdLeftClickText != null)
             {
@@ -83,6 +106,31 @@ public class YeniHold : MonoBehaviour
             }
         }
     }
+    else
+    {
+        // Eğer ray hiçbir şey vurmazsa, önceki materyalin scale'ini sıfırla
+        if (lastHighlightedMaterial != null)
+        {
+            ResetMaterialScale(lastHighlightedMaterial);
+            lastHighlightedMaterial = null; // Vurgulanan materyali sıfırla
+        }
+
+        // Mesajı gizle
+        if (holdLeftClickText != null)
+        {
+            holdLeftClickText.gameObject.SetActive(false);
+        }
+    }
+}
+    
+    void ResetMaterialScale(Material material)
+    {
+        if (material.HasProperty("_Scale"))
+        {
+            material.SetFloat("_Scale", originalScale);
+        }
+    }
+
 
     void TryPickUpObject()
     {

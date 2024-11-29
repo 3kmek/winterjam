@@ -20,6 +20,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Ali Emir/Scripts/ObjectLimit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ali Emir/Scripts/SpawnerAli.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ali Emir/Scripts/YeniHold.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Interaction/CombieMeshesToParent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/gameover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -45,7 +46,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../OverClocked\OverClocked.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../OverCloked folders/OverClocked\OverClocked.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\aliem\Desktop\OverClocked" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -108,6 +109,7 @@
       <workItem from="1732577792309" duration="2908000" />
       <workItem from="1732626728110" duration="4855000" />
       <workItem from="1732737232526" duration="143000" />
+      <workItem from="1732874528824" duration="6381000" />
     </task>
     <servers />
   </component>
