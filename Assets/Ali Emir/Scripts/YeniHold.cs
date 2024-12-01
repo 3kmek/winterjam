@@ -15,7 +15,10 @@ public class YeniHold : MonoBehaviour
     
     private Material lastHighlightedMaterial;
     private float originalScale = 1.0f;
+    private List<MeshRenderer> modifiedRenderers = new List<MeshRenderer>();
 
+    [SerializeField] private float
+    scaleAmount = 1.03f;
     void Update()
     {
         // Objeleri vurgulama ve mesaj gösterme
@@ -60,10 +63,10 @@ public class YeniHold : MonoBehaviour
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
     if (Physics.Raycast(ray, out RaycastHit hit, pickUpRange))
     {
-        if (hit.collider.CompareTag("Interactable"))
+        if (hit.transform.CompareTag("Interactable"))
         {
             holdLeftClickText.gameObject.SetActive(true);
-            MeshRenderer renderer = hit.collider.gameObject.GetComponent<MeshRenderer>();
+            MeshRenderer renderer = hit.transform.GetComponent<MeshRenderer>();
             if (renderer != null && renderer.materials.Length > 1)
             {
                 Material material = renderer.materials[1];
@@ -78,14 +81,42 @@ public class YeniHold : MonoBehaviour
                     // Yeni materyalin scale'ini değiştir
                     if (material.HasProperty("_Scale"))
                     {
-                        material.SetFloat("_Scale", 1.01f);
-                        lastHighlightedMaterial = material; // Şu anki materyali kaydet
+                        material.SetFloat("_Scale", scaleAmount);
+                        lastHighlightedMaterial = material; // Şu anki materyali kaydetRR
                     }
 
                     // Mesajı göster
                     if (holdLeftClickText != null)
                     {
                         holdLeftClickText.gameObject.SetActive(true);
+                    }
+                }
+            }
+
+            if (renderer == null && hit.transform.childCount > 0)
+            {
+                ResetAllModifiedRenderers();
+                for (int i = 0;  hit.transform.childCount > i; i++)
+                {
+                    Transform child = hit.transform.GetChild(i);
+                    MeshRenderer childRenderer = child.GetComponent<MeshRenderer>();
+
+                    if (childRenderer != null && childRenderer.materials.Length > 0)
+                    {
+                        // Daha önce scale'i değiştirilmişse yeniden ekleme
+                        if (!modifiedRenderers.Contains(childRenderer))
+                        {
+                            modifiedRenderers.Add(childRenderer); // Listeye ekle
+                        }
+
+                        // Scale'i değiştir
+                        foreach (var material in childRenderer.materials)
+                        {
+                            if (material.HasProperty("_Scale"))
+                            {
+                                material.SetFloat("_Scale", scaleAmount);
+                            }
+                        }
                     }
                 }
             }
@@ -96,7 +127,13 @@ public class YeniHold : MonoBehaviour
             if (lastHighlightedMaterial != null)
             {
                 ResetMaterialScale(lastHighlightedMaterial);
+                ResetAllModifiedRenderers();
                 lastHighlightedMaterial = null; // Vurgulanan materyali sıfırla
+            }
+
+            if (modifiedRenderers != null)
+            {
+                ResetAllModifiedRenderers();
             }
 
             // Mesajı gizle
@@ -129,6 +166,23 @@ public class YeniHold : MonoBehaviour
         {
             material.SetFloat("_Scale", originalScale);
         }
+    }
+    void ResetAllModifiedRenderers()
+    {
+        // Listeyi döngüyle gez ve scale'leri sıfırla
+        foreach (var renderer in modifiedRenderers)
+        {
+            foreach (var material in renderer.materials)
+            {
+                if (material.HasProperty("_Scale"))
+                {
+                    material.SetFloat("_Scale", 1.0f); // Default scale'e dön
+                }
+            }
+        }
+
+        // Listeyi temizle
+        modifiedRenderers.Clear();
     }
 
 

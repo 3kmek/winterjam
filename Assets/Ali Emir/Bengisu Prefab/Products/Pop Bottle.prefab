@@ -61,9 +61,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7918335002988649766, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7918335002988649766, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8db955b5231e26e48a2803643738ce41, type: 2}
+    - target: {fileID: -7918335002988649766, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 929637c9132cbe842a6c61d60c2846c3, type: 2}
     - target: {fileID: 919132149155446097, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
       propertyPath: m_Name
       value: Pop Bottle
@@ -73,9 +81,17 @@ PrefabInstance:
       value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 7339356831882890532, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339356831882890532, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3b8caef3cbbe7234887d1b6a0baf4b25, type: 2}
+    - target: {fileID: 7339356831882890532, guid: 1bbe4832952a67a40ace60fc60b277b1, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 929637c9132cbe842a6c61d60c2846c3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -42,16 +42,21 @@ public class Lever : MonoBehaviour
 
             if (isLookingAtLever)
             {
-                interactText.gameObject.SetActive(true); // "Hold E" yazısını göster
+                
+                
+                    interactText.gameObject.SetActive(true); // "Hold E" yazısını göster
+                    
+                    if (Input.GetKeyDown(KeyCode.E)) // E tuşuna basıldığında
+                    {
+                        leverAnimator.SetTrigger("Pull"); // Pull triggerını tetikle
+                        interactText.gameObject.SetActive(false); // Yazıyı gizle
+                        belt = GameObject.FindGameObjectWithTag("Belt");
+                        belt.GetComponent<ConveyorBelt>().Pulled();
+                        battery.GetComponent<Battery>().DecreaseBattery();
+                    }
+                
 
-                if (Input.GetKeyDown(KeyCode.E)) // E tuşuna basıldığında
-                {
-                    leverAnimator.SetTrigger("Pull"); // Pull triggerını tetikle
-                    interactText.gameObject.SetActive(false); // Yazıyı gizle
-                    belt = GameObject.FindGameObjectWithTag("Belt");
-                    belt.GetComponent<ConveyorBelt>().Pulled();
-                    battery.GetComponent<Battery>().DecreaseBattery();
-                }
+            
             }
             else
             {
