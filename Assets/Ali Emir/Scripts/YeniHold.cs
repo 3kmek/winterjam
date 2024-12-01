@@ -54,6 +54,7 @@ public class YeniHold : MonoBehaviour
     {
         if (holdLeftClickText != null)
         {
+            ResetAllModifiedRenderers();
             holdLeftClickText.gameObject.SetActive(false);
         }
         return;
